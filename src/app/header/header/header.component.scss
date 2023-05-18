@@ -1,0 +1,95 @@
+#title{
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+}
+
+h1{
+    margin-right: 10px;
+    color: black
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+}
+  
+.navbar-brand {
+  margin: 0 auto;
+}
+
+button{
+  border: none;
+  background-color: rgb(0, 68, 255)
+}
+
+mat-icon{
+  margin: 15px 15px 15px 15px;
+  transform: scale(1.5);
+  color: 255, 204, 0
+}
+
+p{
+  color: black
+}
+  
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.navbar-toggler {
+  border-color: black
+}
+
+a{
+  font-size: 25px;
+}
+
+.nav-item{
+  margin: 15px 15px 15px 15px;
+}
+
+a.white-color {
+  color: rgb(254, 83, 187);
+  text-decoration: none;
+}
+
+#navbarSupportedContent{
+  margin-left: 50px;
+  justify-items: center;
+}
+
+//l
+
+.headerBtn {
+  display: flex;
+  align-items: center;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 17px;
+  padding: 0.8em 1.3em 0.8em 0.9em;
+  color: white;
+  background: #ad5389;
+  background: linear-gradient(to right, #8a328e, #4339b1, #8a328e);
+  border: none;
+  letter-spacing: 0.05em;
+  border-radius: 16px;
+}
+
+button svg {
+  margin-right: 10px;
+  transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.headerBtnSpan {
+  transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+button:hover svg {
+  transform: translateX(5px) rotate(45deg);
+}
+
+button:hover span {
+  transform: translateX(7px);
+}
+
