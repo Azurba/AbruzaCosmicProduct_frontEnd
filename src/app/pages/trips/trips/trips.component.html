@@ -11,7 +11,7 @@
                 <p class="card-text" style="font-size: 18px; color: white;">{{item.description}}</p>
                 <p class="card-text" style="font-weight: bolder; font-size: 18px; color: white;">{{item.price | currency}}</p>
                 <p class="card-text">{{item.rating}}</p>
-                <button class="btn" type="button">
+                <button class="btn" type="button" (click)="addToCart(item)">
                     <strong>Add to Cart</strong>
                     <div id="container-stars">
                     <div id="stars"></div>

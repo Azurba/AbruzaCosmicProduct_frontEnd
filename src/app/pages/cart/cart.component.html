@@ -1,0 +1,59 @@
+<div style="background-color: black;">
+<div class="row">
+    <div class="col-sm-12">
+      <div class="row justify-content-center text-center" style="margin-bottom: 20px;">
+        <h1 style="color: black;">Cart</h1>
+      </div>
+    </div>
+  </div>
+  
+  <div class="row" *ngIf="cartItems.length > 0; else emptyCartMessage">
+    <div *ngFor="let item of cartItems, let i = index" class="col-xs-12 col-lg-12 d-flex justify-content-center">
+        <div class="card" style="width: 85%; margin-right: 40px; margin-bottom: 40px; background-color: black; border-color: #8F51EA;">
+            <div class="row">
+              <div class="col-md-3">
+                <img src={{item.image}} class="card-img-top" alt="..." style="object-fit: contain; width: 100%; height: 250px;">
+              </div>
+              <div class="col-md-7">
+                <div class="card-body text-center">
+                    <h1 class="card-title" style="font-size: 20px; color: white;">{{item.name}}</h1>
+                    <p class="card-text" style="font-size: 18px; color: white;">{{item.description}}</p>
+                    <p class="card-text" style="font-weight: bolder; font-size: 18px; color: white;">{{item.price | currency}}</p>
+                    <p class="card-text">{{item.rating}}</p>
+                    <button class="buttonQty" (click)="decreaseQuantity()">
+                        <p class="buttonQtyText">-</p>
+                      </button>
+                      <span class="quantity">{{quantity}}</span>
+                    <button class="buttonQty" (click)="increaseQuantity()">
+                        <p class="buttonQtyText">+</p>
+                    </button>
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="card-body text-center">
+                    <h1 style="color: white; font-size: 30px;">Total</h1>
+                    <p class="card-text" style="font-weight: bolder; font-size: 18px; color: white;">{{quantity}} x {{item && item.price ? (quantity * item.price | currency) : 'N/A'}}</p>       
+                </div>
+                <div class="d-flex justify-content-center">
+                    <button type="button" class="btn btn-danger" (click)="deleteItem(i)">Delete Item</button>
+                </div>
+              </div>
+            </div>
+          </div>          
+    </div>
+  </div>
+  
+  <ng-template #emptyCartMessage>
+    <div class="row justify-content-center text-center">
+      <p style="font-size: 25px; color: white;">No items in the cart. Click here to continue shopping</p>
+      <div class="col-sm-6 d-flex align-items-center justify-content-center text-center" style="margin-top: 10px;">
+        <button class="headerBtn" (click)="redirect()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-handbag" viewBox="0 0 16 16">
+                <path d="M8 1a2 2 0 0 1 2 2v2H6V3a2 2 0 0 1 2-2zm3 4V3a3 3 0 1 0-6 0v2H3.36a1.5 1.5 0 0 0-1.483 1.277L.85 13.13A2.5 2.5 0 0 0 3.322 16h9.355a2.5 2.5 0 0 0 2.473-2.87l-1.028-6.853A1.5 1.5 0 0 0 12.64 5H11zm-1 1v1.5a.5.5 0 0 0 1 0V6h1.639a.5.5 0 0 1 .494.426l1.028 6.851A1.5 1.5 0 0 1 12.678 15H3.322a1.5 1.5 0 0 1-1.483-1.723l1.028-6.851A.5.5 0 0 1 3.36 6H5v1.5a.5.5 0 1 0 1 0V6h4z"/>
+            </svg>
+          <span class="headerBtnSpan">Continue Shopping</span>
+        </button>
+      </div>
+    </div>
+  </ng-template>
+</div>

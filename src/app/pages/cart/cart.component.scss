@@ -1,0 +1,68 @@
+
+.headerBtn {
+    display: flex;
+    align-items: center;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 18px;
+    padding: 0.8em 1.3em 0.8em 0.9em;
+    color: white;
+    background: #ad5389;
+    background: linear-gradient(to right, #8a328e, #8a328e, #8a328e);
+    border: none;
+    letter-spacing: 0.05em;
+    border-radius: 16px;
+  }
+  
+  button svg {
+    margin-right: 10px;
+    transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+  }
+  
+  .headerBtnSpan {
+    transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+  }
+  
+  button:hover svg {
+    transform: translateX(5px) rotate(40deg);
+  }
+  
+  button:hover span {
+    transform: translateX(7px);
+  }
+
+//asdasd
+.buttonQty {
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    transition-duration: .3s;
+    border: none;
+  }
+  
+  .buttonQtyText {
+    font-size: 25px;
+    line-height: 1;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .quantity {
+    font-size: 20px;
+    color: white;
+    margin: 0 20px;
+  }
+  
+  
+  .buttonQty:hover {
+    background-color: rgb(138, 50, 142);
+  }
+  
+  .buttonQty:active {
+    transform: scale(0.8);
+  }
+  
+  

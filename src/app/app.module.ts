@@ -7,13 +7,15 @@ import { HeaderComponent } from './header/header/header.component';
 import { TripsComponent } from './pages/trips/trips/trips.component';
 import { HomeComponent } from './pages/home/home/home.component';
 import { HttpClientModule } from '@angular/common/http';
+import { CartComponent } from './pages/cart/cart.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     TripsComponent,
-    HomeComponent
+    HomeComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
