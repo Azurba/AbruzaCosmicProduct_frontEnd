@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Product } from '../models/product';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Injectable({
   providedIn: 'root'
@@ -8,11 +9,10 @@ export class CartService {
 
   private cartItems: Product[] = [];
 
-  constructor() { }
+  constructor(private _snackBar: MatSnackBar) { }
 
   addToCart(item: Product): void {
     const existingItem = this.cartItems.find(cartItem => cartItem.id === item.id);
-    console.log(existingItem)
     if (existingItem) {
       if(existingItem.quantity != undefined){
         existingItem.quantity += 1;
@@ -21,6 +21,7 @@ export class CartService {
       this.cartItems.push(item);
     }
   }
+  
   deleteItem(index : number) : void {
     this.cartItems.splice(index, 1)
   }
