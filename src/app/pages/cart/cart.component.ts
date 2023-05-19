@@ -12,32 +12,47 @@ export class CartComponent {
   
   cartItems : Product[] = []
   generateRandomLink : String[] = ['/trips', '/courses', '/books', '/items'];
-  quantity : number = 1;
+  finalPrice : number;
 
   constructor(private cartService: CartService, private router: Router) {
     this.cartItems = this.cartService.getCartItems();
-    console.log(this.cartItems)
+    console.log(this.cartItems);
+    this.finalPrice = 0;
   }
 
   redirect(){
     const random = Math.floor(Math.random() * this.generateRandomLink.length);
     const randomItem = this.generateRandomLink[random].toString();
-    console.log(randomItem);
     this.router.navigateByUrl('/trips');
   }
 
   increaseQuantity(item : Product): void {
-    item.quantity = (item.quantity ?? 0) + 1;
+    // item.quantity = (item.quantity ?? 0) + 1;
+    if(item.quantity != undefined){
+      item.quantity+=1;
+    }
   }
 
   decreaseQuantity(item : Product): void {
-    if (item.quantity && item.quantity > 1) {
-      item.quantity--;
+    // if (item.quantity && item.quantity > 1) {
+    //   item.quantity--;
+    // }
+    if(item.quantity != undefined){
+      item.quantity-=1;
     }
   }
 
   deleteItem(index : number) : void {
     this.cartItems.splice(index, 1)
+  }
+
+  getTotal() : number{
+    for(const item of this.cartItems){
+      if (item.quantity != undefined && item.price != undefined) {
+        this.finalPrice += (item.quantity * item.price);
+      }
+    }
+    return this.finalPrice;
   }
 
 }
