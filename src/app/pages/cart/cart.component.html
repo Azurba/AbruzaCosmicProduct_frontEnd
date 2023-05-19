@@ -32,7 +32,8 @@
               <div class="col-md-2">
                 <div class="card-body text-center">
                     <h1 style="color: white; font-size: 30px;">Total</h1>
-                    <p class="card-text" style="font-weight: bolder; font-size: 18px; color: white;">{{item.quantity}} x {{item && item.price ? (quantity * item.price | currency) : 'N/A'}}</p>       
+                    <p class="card-text" style="font-weight: bolder; font-size: 18px; color: white;">{{(item.quantity != null && item.price != null) ? (item.quantity * item.price | currency) : "N/A"}};
+                    </p>       
                 </div>
                 <div class="d-flex justify-content-center">
                     <button type="button" class="btn btn-danger" (click)="deleteItem(i)">Delete Item</button>
