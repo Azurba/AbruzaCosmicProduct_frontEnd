@@ -26,13 +26,13 @@ export class CartComponent {
     this.router.navigateByUrl('/trips');
   }
 
-  increaseQuantity(): void {
-    this.quantity++;
+  increaseQuantity(item : Product): void {
+    item.quantity = (item.quantity ?? 0) + 1;
   }
 
-  decreaseQuantity(): void {
-    if (this.quantity > 1) {
-      this.quantity--;
+  decreaseQuantity(item : Product): void {
+    if (item.quantity && item.quantity > 1) {
+      item.quantity--;
     }
   }
 

@@ -6,5 +6,4 @@ export class Product{
     rating? : number;
     price? : number;
     image? : string;
-
 }

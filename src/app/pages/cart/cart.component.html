@@ -20,11 +20,11 @@
                     <p class="card-text" style="font-size: 18px; color: white;">{{item.description}}</p>
                     <p class="card-text" style="font-weight: bolder; font-size: 18px; color: white;">{{item.price | currency}}</p>
                     <p class="card-text">{{item.rating}}</p>
-                    <button class="buttonQty" (click)="decreaseQuantity()">
+                    <button class="buttonQty" (click)="decreaseQuantity(item)">
                         <p class="buttonQtyText">-</p>
                       </button>
-                      <span class="quantity">{{quantity}}</span>
-                    <button class="buttonQty" (click)="increaseQuantity()">
+                      <span class="quantity">{{item.quantity}}</span>
+                    <button class="buttonQty" (click)="increaseQuantity(item)">
                         <p class="buttonQtyText">+</p>
                     </button>
                 </div>
@@ -32,7 +32,7 @@
               <div class="col-md-2">
                 <div class="card-body text-center">
                     <h1 style="color: white; font-size: 30px;">Total</h1>
-                    <p class="card-text" style="font-weight: bolder; font-size: 18px; color: white;">{{quantity}} x {{item && item.price ? (quantity * item.price | currency) : 'N/A'}}</p>       
+                    <p class="card-text" style="font-weight: bolder; font-size: 18px; color: white;">{{item.quantity}} x {{item && item.price ? (quantity * item.price | currency) : 'N/A'}}</p>       
                 </div>
                 <div class="d-flex justify-content-center">
                     <button type="button" class="btn btn-danger" (click)="deleteItem(i)">Delete Item</button>
