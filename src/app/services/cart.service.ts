@@ -11,7 +11,16 @@ export class CartService {
   constructor() { }
 
   addToCart(item: Product): void {
-    this.cartItems.push(item);
+    const existingItem = this.cartItems.find(cartItem => cartItem.id === item.id);
+    console.log(existingItem)
+    if (existingItem) {
+      if(existingItem.quantity != undefined){
+        existingItem.quantity += 1;
+      }
+    } else{
+      this.cartItems.push(item);
+    }
+    
   }
 
   getCartItems(): Product[] {

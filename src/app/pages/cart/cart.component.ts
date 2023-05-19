@@ -16,7 +16,6 @@ export class CartComponent {
 
   constructor(private cartService: CartService, private router: Router) {
     this.cartItems = this.cartService.getCartItems();
-    console.log(this.cartItems);
     this.finalPrice = 0;
   }
 
