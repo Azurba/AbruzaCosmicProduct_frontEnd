@@ -25,12 +25,14 @@ export class CartService {
   
   deleteItem(index : number) : void {
     this.cartItems.splice(index, 1)
+    this._snackBar.open('1 item removed from the cart.', 'Close', { duration: 3000, horizontalPosition: 'center', verticalPosition: 'bottom' });
   }
 
   increaseQuantity(item : Product): void {
     if(item.quantity != undefined){
       item.quantity+=1;
     }
+    this._snackBar.open('1 item added to cart.', 'Close', { duration: 3000, horizontalPosition: 'center', verticalPosition: 'bottom' });
   }
 
   decreaseQuantity(item : Product): void {
@@ -40,6 +42,7 @@ export class CartService {
         item.quantity = 0;
       }
     }
+    this._snackBar.open('1 item removed from the cart.', 'Close', { duration: 3000, horizontalPosition: 'center', verticalPosition: 'bottom' });
   }
 
   /*
