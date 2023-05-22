@@ -24,7 +24,5 @@ export class TripsComponent {
 
   addToCart(item : Product){
     this.cartService.addToCart(item);
-    this._snackBar.open('1 item added to cart.', 'Ok', { duration: 3000, horizontalPosition: 'start', verticalPosition: 'top' });
-
   }
 }

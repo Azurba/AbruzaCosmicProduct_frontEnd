@@ -20,6 +20,7 @@ export class CartService {
     } else{
       this.cartItems.push(item);
     }
+    this._snackBar.open('1 item added to cart.', 'Close', { duration: 3000, horizontalPosition: 'center', verticalPosition: 'bottom' });
   }
   
   deleteItem(index : number) : void {
