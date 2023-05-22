@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Product } from '../models/product';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -8,6 +9,8 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 export class CartService {
 
   private cartItems: Product[] = [];
+  //create a BehaviorSubject property to send the information to the header matBadge
+  cartBadge: BehaviorSubject<Product[]> = new BehaviorSubject<Product[]>(this.cartItems);
 
   constructor(private _snackBar: MatSnackBar) { }
 
@@ -20,11 +23,13 @@ export class CartService {
     } else{
       this.cartItems.push(item);
     }
+    this.cartBadge.next(this.cartItems);
     this._snackBar.open('1 item added to cart.', 'Close', { duration: 3000, horizontalPosition: 'center', verticalPosition: 'bottom' });
   }
   
   deleteItem(index : number) : void {
     this.cartItems.splice(index, 1)
+    this.cartBadge.next(this.cartItems);
     this._snackBar.open('1 item removed from the cart.', 'Close', { duration: 3000, horizontalPosition: 'center', verticalPosition: 'bottom' });
   }
 
