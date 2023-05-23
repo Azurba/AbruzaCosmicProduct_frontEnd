@@ -21,75 +21,23 @@ export class TripsComponent {
       description: "This is a test",
       rating: 1,
       price: 12.50,
-      image: "https://m.media-amazon.com/images/I/A13usaonutL._CLa%7C2140%2C2000%7C81JX99E6w-L.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_AC_UX679_.png"
+      image: "https://m.media-amazon.com/images/I/A13usaonutL._CLa%7C2140%2C2000%7C81JX99E6w-L.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_AC_UX679_.png",
+      selectedSize: '',
+      selectedColor: ''
     },
     {
-      id: 1,
+      id: 2,
       name: "Test Card",
       quantity: 1,
       description: "This is a test",
       rating: 1,
       price: 12.50,
-      image: "https://m.media-amazon.com/images/I/A13usaonutL._CLa%7C2140%2C2000%7C81JX99E6w-L.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_AC_UX679_.png"
+      image: "https://m.media-amazon.com/images/I/A13usaonutL._CLa%7C2140%2C2000%7C81JX99E6w-L.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_AC_UX679_.png",
+      selectedSize: '',
+      selectedColor: ''
     },
-    {
-      id: 1,
-      name: "Test Card",
-      quantity: 1,
-      description: "This is a test",
-      rating: 1,
-      price: 12.50,
-      image: "https://m.media-amazon.com/images/I/A13usaonutL._CLa%7C2140%2C2000%7C81JX99E6w-L.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_AC_UX679_.png"
-    },
-    {
-      id: 1,
-      name: "Test Card",
-      quantity: 1,
-      description: "This is a test",
-      rating: 1,
-      price: 12.50,
-      image: "https://m.media-amazon.com/images/I/A13usaonutL._CLa%7C2140%2C2000%7C81JX99E6w-L.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_AC_UX679_.png"
-    },
-    {
-      id: 1,
-      name: "Test Card",
-      quantity: 1,
-      description: "This is a test",
-      rating: 1,
-      price: 12.50,
-      image: "https://m.media-amazon.com/images/I/A13usaonutL._CLa%7C2140%2C2000%7C81JX99E6w-L.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_AC_UX679_.png"
-    },
-    {
-      id: 1,
-      name: "Test Card",
-      quantity: 1,
-      description: "This is a test",
-      rating: 1,
-      price: 12.50,
-      image: "https://m.media-amazon.com/images/I/41q1soPbj1L._AC_SX679._SX._UX._SY._UY_.jpg"
-    },
-    {
-      id: 1,
-      name: "Test Card",
-      quantity: 1,
-      description: "This is a test",
-      rating: 1,
-      price: 12.50,
-      image: "https://m.media-amazon.com/images/I/A13usaonutL._CLa%7C2140%2C2000%7C81JX99E6w-L.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_AC_UX679_.png"
-    },
-    {
-      id: 1,
-      name: "Test Card",
-      quantity: 1,
-      description: "This is a test",
-      rating: 1,
-      price: 12.50,
-      image: "https://m.media-amazon.com/images/I/A13usaonutL._CLa%7C2140%2C2000%7C81JX99E6w-L.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_AC_UX679_.png"
-    },
+
   ]
-    
-  selectedSize?: string;
-  selectedColor?: string;
 
   constructor(private productService : ProductsService, private cartService : CartService, private _snackBar: MatSnackBar, private matIconRegistry : MatIconRegistry, private domSanitizer : DomSanitizer) {
     this.matIconRegistry.addSvgIcon('star', this.domSanitizer.bypassSecurityTrustResourceUrl('/assets/svg/star.svg'))
@@ -106,11 +54,17 @@ export class TripsComponent {
     this.cartService.addToCart(item);
   }
 
-  onSizeChange(event: MatRadioChange) {
-    this.selectedSize = event.value;
+  onSizeChange(event: MatRadioChange, item: Product) {
+    const index = this.productsArray.findIndex((product) => product.id === item.id);
+    if (index !== -1) {
+      this.productsArray[index].selectedSize = event.value;
+    }
   }
-  
-  onColorChange(event: MatRadioChange) {
-    this.selectedColor = event.value;
+
+  onColorChange(event: MatRadioChange, item: Product) {
+    const index = this.productsArray.findIndex((product) => product.id === item.id);
+    if (index !== -1) {
+      this.productsArray[index].selectedColor = event.value;
+    }
   }
 }
