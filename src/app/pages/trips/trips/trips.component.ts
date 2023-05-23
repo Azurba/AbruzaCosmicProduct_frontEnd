@@ -14,28 +14,28 @@ import { MatRadioChange } from '@angular/material/radio';
 })
 export class TripsComponent {
   productsArray : Product[] = [
-    {
-      id: 1,
-      name: "Test Card",
-      quantity: 1,
-      description: "This is a test",
-      rating: 1,
-      price: 12.50,
-      image: "https://m.media-amazon.com/images/I/A13usaonutL._CLa%7C2140%2C2000%7C81JX99E6w-L.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_AC_UX679_.png",
-      selectedSize: '',
-      selectedColor: ''
-    },
-    {
-      id: 2,
-      name: "Test Card",
-      quantity: 1,
-      description: "This is a test",
-      rating: 1,
-      price: 12.50,
-      image: "https://m.media-amazon.com/images/I/A13usaonutL._CLa%7C2140%2C2000%7C81JX99E6w-L.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_AC_UX679_.png",
-      selectedSize: '',
-      selectedColor: ''
-    },
+    // {
+    //   id: 1,
+    //   name: "Test Card",
+    //   quantity: 1,
+    //   description: "This is a test",
+    //   rating: 1,
+    //   price: 12.50,
+    //   image: "https://m.media-amazon.com/images/I/A13usaonutL._CLa%7C2140%2C2000%7C81JX99E6w-L.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_AC_UX679_.png",
+    //   selectedSize: '',
+    //   selectedColor: ''
+    // },
+    // {
+    //   id: 2,
+    //   name: "Test Card",
+    //   quantity: 1,
+    //   description: "This is a test",
+    //   rating: 1,
+    //   price: 12.50,
+    //   image: "https://m.media-amazon.com/images/I/A13usaonutL._CLa%7C2140%2C2000%7C81JX99E6w-L.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_AC_UX679_.png",
+    //   selectedSize: '',
+    //   selectedColor: ''
+    // },
 
   ]
 
@@ -48,6 +48,9 @@ export class TripsComponent {
     // this.productService.getAllProducts().subscribe(result =>{
     //   this.productsArray = result;
     // });
+    this.productService.getProductsByType('tshirts').subscribe(result =>{
+      this.productsArray = result;
+    });
   }
 
   addToCart(item : Product){

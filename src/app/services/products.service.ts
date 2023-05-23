@@ -15,4 +15,8 @@ export class ProductsService {
   public getAllProducts() : Observable<Product[]>{
     return this.http.get<Product[]>("https://localhost:7170/api/Products");
   }
+
+  public getProductsByType(productType: string): Observable<Product[]> {
+    return this.http.get<Product[]>(`https://localhost:7170/api/Products/type/${productType}`);
+  }
 }
