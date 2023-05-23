@@ -45,23 +45,23 @@
                     <mat-icon svgIcon="star" style="color: #FF9900;"></mat-icon>
                   </div>
                 <p class="card-text" style="font-size: 18px; color: black; margin-top: 20px;">Size</p>
-                <mat-radio-group aria-label="Select an option">
+                <mat-radio-group aria-label="Select an option" [(ngModel)]="selectedSize">
                     <mat-radio-button color="warn" value="1">XS</mat-radio-button>
                     <mat-radio-button value="2">S</mat-radio-button>
-                    <mat-radio-button value="1">M</mat-radio-button>
-                    <mat-radio-button value="2">L</mat-radio-button>
-                    <mat-radio-button value="1">XL</mat-radio-button>
+                    <mat-radio-button value="3">M</mat-radio-button>
+                    <mat-radio-button value="4">L</mat-radio-button>
+                    <mat-radio-button value="5">XL</mat-radio-button>
                 </mat-radio-group>
                 <p class="card-text" style="font-size: 18px; color: black; margin-top: 20px;">Color</p>
-                <mat-radio-group aria-label="Select an option">
+                <mat-radio-group aria-label="Select an option" [(ngModel)]="selectedColor">
                     <mat-radio-button value="1">Black</mat-radio-button>
                     <mat-radio-button value="2">White</mat-radio-button>
-                    <mat-radio-button value="1">Red</mat-radio-button>
-                    <mat-radio-button value="2">Green</mat-radio-button>
-                    <mat-radio-button value="1">Blue</mat-radio-button>
-                    <mat-radio-button value="1">Yellow</mat-radio-button>
-                    <mat-radio-button value="2">Pink</mat-radio-button>
-                    <mat-radio-button value="1">Purple</mat-radio-button>
+                    <mat-radio-button value="3">Red</mat-radio-button>
+                    <mat-radio-button value="4">Green</mat-radio-button>
+                    <mat-radio-button value="5">Blue</mat-radio-button>
+                    <mat-radio-button value="6">Yellow</mat-radio-button>
+                    <mat-radio-button value="7">Pink</mat-radio-button>
+                    <mat-radio-button value="8">Purple</mat-radio-button>
                 </mat-radio-group>
                 <button class="btn" type="button" (click)="addToCart(item)">
                     <strong>Add to Cart</strong>

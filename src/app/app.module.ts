@@ -15,6 +15,7 @@ import { CartService } from './services/cart.service';
 import {MatBadgeModule} from '@angular/material/badge';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatIconModule} from '@angular/material/icon';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import {MatIconModule} from '@angular/material/icon';
     BrowserAnimationsModule,
     MatBadgeModule,
     MatRadioModule,
-    MatIconModule
+    MatIconModule,
+    FormsModule
   ],
   providers: [ProductsService, CartService],
   bootstrap: [AppComponent]
