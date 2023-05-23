@@ -21,6 +21,7 @@ import { HatsComponent } from './pages/hats/hats.component';
 import { PostersComponent } from './pages/posters/posters.component';
 import { TelescopesComponent } from './pages/telescopes/telescopes.component';
 import { SpaceSuitComponent } from './pages/space-suit/space-suit.component';
+import { BooksComponent } from './pages/books/books.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { SpaceSuitComponent } from './pages/space-suit/space-suit.component';
     HatsComponent,
     PostersComponent,
     TelescopesComponent,
-    SpaceSuitComponent
+    SpaceSuitComponent,
+    BooksComponent
   ],
   imports: [
     BrowserModule,
