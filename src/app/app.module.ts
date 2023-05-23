@@ -13,6 +13,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ProductsService } from './services/products.service';
 import { CartService } from './services/cart.service';
 import {MatBadgeModule} from '@angular/material/badge';
+import {MatRadioModule} from '@angular/material/radio';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import {MatBadgeModule} from '@angular/material/badge';
     HttpClientModule,
     MatSnackBarModule,
     BrowserAnimationsModule,
-    MatBadgeModule
+    MatBadgeModule,
+    MatRadioModule
   ],
   providers: [ProductsService, CartService],
   bootstrap: [AppComponent]
