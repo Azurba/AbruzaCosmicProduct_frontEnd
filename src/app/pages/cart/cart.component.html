@@ -16,7 +16,7 @@
               </div>
               <div class="col-md-7">
                 <div class="card-body text-center">
-                    <h1 class="card-title" style="font-size: 20px; color: black;">{{item.name}} - {{item.selectedColor}}, {{item.selectedSize}}</h1>
+                    <h1 class="card-title" style="font-size: 20px; color: black;">{{item.name}} ({{item.selectedSize}}) - {{item.selectedColor}}</h1>
                     <p class="card-text" style="font-size: 18px; color: black;">{{item.description}}</p>
                     <p class="card-text" style="font-weight: bolder; font-size: 18px; color: black;">{{item.price | currency}}</p>
                     <button class="buttonQty" (click)="decreaseQuantity(item)">

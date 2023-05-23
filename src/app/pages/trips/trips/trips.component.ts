@@ -51,7 +51,11 @@ export class TripsComponent {
   }
 
   addToCart(item : Product){
-    this.cartService.addToCart(item);
+    if(!item.selectedSize || !item.selectedColor){
+      this._snackBar.open('You need to select a color and/or a size before adding to the cart', 'Close', { duration: 8000, horizontalPosition: 'center', verticalPosition: 'bottom' });
+    }else{
+      this.cartService.addToCart(item);
+    }
   }
 
   onSizeChange(event: MatRadioChange, item: Product) {
