@@ -48,7 +48,7 @@ export class TripsComponent {
     // this.productService.getAllProducts().subscribe(result =>{
     //   this.productsArray = result;
     // });
-    this.productService.getProductsByType('book').subscribe(result =>{
+    this.productService.getProductsByType('trip').subscribe(result =>{
       this.productsArray = result;
     });
   }
@@ -58,27 +58,6 @@ export class TripsComponent {
       this._snackBar.open('You need to select a gender, color and/or size before adding to the cart', 'Close', { duration: 8000, horizontalPosition: 'center', verticalPosition: 'bottom' });
     }else{
       this.cartService.addToCart(item);
-    }
-  }
-
-  onGenderChange(event: MatRadioChange, item: Product) {
-    const index = this.productsArray.findIndex((product) => product.id === item.id);
-    if (index !== -1) {
-      this.productsArray[index].selectedGender = event.value;
-    }
-  }
-
-  onSizeChange(event: MatRadioChange, item: Product) {
-    const index = this.productsArray.findIndex((product) => product.id === item.id);
-    if (index !== -1) {
-      this.productsArray[index].selectedSize = event.value;
-    }
-  }
-
-  onColorChange(event: MatRadioChange, item: Product) {
-    const index = this.productsArray.findIndex((product) => product.id === item.id);
-    if (index !== -1) {
-      this.productsArray[index].selectedColor = event.value;
     }
   }
 }

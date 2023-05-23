@@ -1,6 +1,6 @@
 <div style="background-color: whitesmoke">
     <div class="row justify-content-center text-center" style="margin-bottom: 20px;">
-        <h1 style="color: Black; margin-top: 50px;">T-shirts</h1>
+        <h1 style="color: Black; margin-top: 50px;">Trip to the International Space Station (ISS)</h1>
     </div>
     <div class="row justify-content-center">
         <div *ngFor="let item of productsArray" class="col-xs-12 col-lg-3 d-flex justify-content-center">
@@ -45,35 +45,6 @@
                     <mat-icon svgIcon="star" style="color: #FF9900;"></mat-icon>
                   </div>
                 <p style="margin-bottom: 20px;"></p>
-                <!-- Gender -->
-                <mat-radio-group [name]="'gender-' + item.id" [(ngModel)]="item.selectedGender">
-                <mat-radio-button value="Men">Men</mat-radio-button>
-                <mat-radio-button value="Woman">Woman</mat-radio-button>
-                </mat-radio-group>
-
-                <!-- Size -->
-                <p class="card-text" style="font-size: 18px; color: black; margin-top: 20px;">Size</p>
-                <mat-radio-group [name]="'size-' + item.id" [(ngModel)]="item.selectedSize">
-                <mat-radio-button value="XS">XS</mat-radio-button>
-                <mat-radio-button value="S">S</mat-radio-button>
-                <mat-radio-button value="M">M</mat-radio-button>
-                <mat-radio-button value="L">L</mat-radio-button>
-                <mat-radio-button value="XL">XL</mat-radio-button>
-                </mat-radio-group>
-
-                <!-- Color -->
-                <p class="card-text" style="font-size: 18px; color: black; margin-top: 20px;">Color</p>
-                <mat-radio-group [name]="'color-' + item.id" [(ngModel)]="item.selectedColor">
-                <mat-radio-button value="Black">Black</mat-radio-button>
-                <mat-radio-button value="White">White</mat-radio-button>
-                <mat-radio-button value="Red">Red</mat-radio-button>
-                <mat-radio-button value="Green">Green</mat-radio-button>
-                <mat-radio-button value="Blue">Blue</mat-radio-button>
-                <mat-radio-button value="Yellow">Yellow</mat-radio-button>
-                <mat-radio-button value="Pink">Pink</mat-radio-button>
-                <mat-radio-button value="Purple">Purple</mat-radio-button>
-                </mat-radio-group>
-
                 <button class="btn" type="button" (click)="addToCart(item)">
                     <strong>Add to Cart</strong>
                     <div id="container-stars">
