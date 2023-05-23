@@ -16,6 +16,7 @@ import {MatBadgeModule} from '@angular/material/badge';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatIconModule} from '@angular/material/icon';
 import { FormsModule } from '@angular/forms';
+import { TshirtsComponent } from './pages/tshirts/tshirts.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { FormsModule } from '@angular/forms';
     HeaderComponent,
     TripsComponent,
     HomeComponent,
-    CartComponent
+    CartComponent,
+    TshirtsComponent
   ],
   imports: [
     BrowserModule,
