@@ -19,6 +19,7 @@ import { FormsModule } from '@angular/forms';
 import { TshirtsComponent } from './pages/tshirts/tshirts.component';
 import { HatsComponent } from './pages/hats/hats.component';
 import { PostersComponent } from './pages/posters/posters.component';
+import { TelescopesComponent } from './pages/telescopes/telescopes.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { PostersComponent } from './pages/posters/posters.component';
     CartComponent,
     TshirtsComponent,
     HatsComponent,
-    PostersComponent
+    PostersComponent,
+    TelescopesComponent
   ],
   imports: [
     BrowserModule,
