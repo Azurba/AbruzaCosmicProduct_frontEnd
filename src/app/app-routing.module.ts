@@ -7,6 +7,7 @@ import { TshirtsComponent } from './pages/tshirts/tshirts.component';
 import { HatsComponent } from './pages/hats/hats.component';
 import { PostersComponent } from './pages/posters/posters.component';
 import { TelescopesComponent } from './pages/telescopes/telescopes.component';
+import { SpaceSuitComponent } from './pages/space-suit/space-suit.component';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
@@ -16,7 +17,8 @@ const routes: Routes = [
   {path: 'tshirts', component: TshirtsComponent},
   {path: 'hats', component: HatsComponent},
   {path: 'posters', component: PostersComponent},
-  {path: 'telescopes', component: TelescopesComponent}
+  {path: 'telescopes', component: TelescopesComponent},
+  {path: 'spaceSuit', component: SpaceSuitComponent}
 ];
 
 @NgModule({

@@ -20,6 +20,7 @@ import { TshirtsComponent } from './pages/tshirts/tshirts.component';
 import { HatsComponent } from './pages/hats/hats.component';
 import { PostersComponent } from './pages/posters/posters.component';
 import { TelescopesComponent } from './pages/telescopes/telescopes.component';
+import { SpaceSuitComponent } from './pages/space-suit/space-suit.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { TelescopesComponent } from './pages/telescopes/telescopes.component';
     TshirtsComponent,
     HatsComponent,
     PostersComponent,
-    TelescopesComponent
+    TelescopesComponent,
+    SpaceSuitComponent
   ],
   imports: [
     BrowserModule,

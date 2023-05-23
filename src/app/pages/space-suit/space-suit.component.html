@@ -1,0 +1,62 @@
+<div style="background-color: whitesmoke">
+    <div class="row justify-content-center text-center" style="margin-bottom: 20px;">
+        <h1 style="color: Black; margin-top: 50px;">Space Suit</h1>
+    </div>
+    <div class="row justify-content-center">
+        <div *ngFor="let item of productsArray" class="col-xs-12 col-lg-3 d-flex justify-content-center">
+            <div class="card" style="width: 85%; margin-right: 40px; margin-bottom: 40px; background-color: white; border-color: #8a328e;">
+                <img src={{item.image}} class="card-img-top" alt="..." style="object-fit: contain; width: 100%; height: 250px;">
+                <div class="card-body text-center ">
+                <h1 class="card-title" style="font-size: 20px; color: black;">{{item.name}}</h1>
+                <p class="card-text" style="font-weight: bolder; font-size: 18px; color: black; margin-bottom: 20px;">{{item.price | currency}}</p>
+                <div *ngIf="item?.rating === 1">
+                    <mat-icon svgIcon="star" style="color:  #FF9900;"></mat-icon>
+                    <mat-icon svgIcon="starEmpty" style="color: #FF9900"></mat-icon>
+                    <mat-icon svgIcon="starEmpty" style="color: #FF9900;"></mat-icon>
+                    <mat-icon svgIcon="starEmpty" style="color: #FF9900;"></mat-icon>
+                    <mat-icon svgIcon="starEmpty" style="color: #FF9900;"></mat-icon>
+                  </div>
+                  <div *ngIf="item?.rating === 2">
+                    <mat-icon svgIcon="star" style="color: #FF9900;"></mat-icon>
+                    <mat-icon svgIcon="star" style="color: #FF9900;"></mat-icon>
+                    <mat-icon svgIcon="starEmpty" style="color: #FF9900;"></mat-icon>
+                    <mat-icon svgIcon="starEmpty" style="color: #FF9900;"></mat-icon>
+                    <mat-icon svgIcon="starEmpty" style="color: #FF9900;"></mat-icon>
+                  </div>
+                  <div *ngIf="item?.rating === 3">
+                    <mat-icon svgIcon="star" style="color: #FF9900;"></mat-icon>
+                    <mat-icon svgIcon="star" style="color: #FF9900;"></mat-icon>
+                    <mat-icon svgIcon="star" style="color: #FF9900;"></mat-icon>
+                    <mat-icon svgIcon="starEmpty" style="color: #FF9900;"></mat-icon>
+                    <mat-icon svgIcon="starEmpty" style="color: #FF9900;"></mat-icon>
+                  </div>
+                  <div *ngIf="item?.rating === 4">
+                    <mat-icon svgIcon="star" style="color: #FF9900;"></mat-icon>
+                    <mat-icon svgIcon="star" style="color: #FF9900;"></mat-icon>
+                    <mat-icon svgIcon="star" style="color: #FF9900;"></mat-icon>
+                    <mat-icon svgIcon="star" style="color: #FF9900;"></mat-icon>
+                    <mat-icon svgIcon="starEmpty" style="color: #FF9900;"></mat-icon>
+                  </div>
+                  <div *ngIf="item?.rating === 5">
+                    <mat-icon svgIcon="star" style="color: #FF9900;"></mat-icon>
+                    <mat-icon svgIcon="star" style="color: #FF9900;"></mat-icon>
+                    <mat-icon svgIcon="star" style="color: #FF9900;"></mat-icon>
+                    <mat-icon svgIcon="star" style="color: #FF9900;"></mat-icon>
+                    <mat-icon svgIcon="star" style="color: #FF9900;"></mat-icon>
+                  </div>
+                <p style="margin-bottom: 20px;"></p>
+                <button class="btn" type="button" (click)="addToCart(item)">
+                    <strong>Add to Cart</strong>
+                    <div id="container-stars">
+                    <div id="stars"></div>
+                    </div>
+                    <div id="glow">
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    </div>
+                </button>              
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
