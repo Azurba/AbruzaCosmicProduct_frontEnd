@@ -21,6 +21,7 @@ export class CartService {
         existingItem.quantity += 1;
       }
     } else{
+      item.quantity = 1;
       this.cartItems.push(item);
     }
     this.cartBadge.next(this.cartItems);

@@ -17,6 +17,7 @@ import {MatRadioModule} from '@angular/material/radio';
 import {MatIconModule} from '@angular/material/icon';
 import { FormsModule } from '@angular/forms';
 import { TshirtsComponent } from './pages/tshirts/tshirts.component';
+import { HatsComponent } from './pages/hats/hats.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { TshirtsComponent } from './pages/tshirts/tshirts.component';
     TripsComponent,
     HomeComponent,
     CartComponent,
-    TshirtsComponent
+    TshirtsComponent,
+    HatsComponent
   ],
   imports: [
     BrowserModule,
