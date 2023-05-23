@@ -54,10 +54,17 @@ export class TripsComponent {
   }
 
   addToCart(item : Product){
-    if(!item.selectedSize || !item.selectedColor){
-      this._snackBar.open('You need to select a color and/or a size before adding to the cart', 'Close', { duration: 8000, horizontalPosition: 'center', verticalPosition: 'bottom' });
+    if(!item.selectedSize || !item.selectedColor || !item.selectedGender){
+      this._snackBar.open('You need to select a gender, color and/or size before adding to the cart', 'Close', { duration: 8000, horizontalPosition: 'center', verticalPosition: 'bottom' });
     }else{
       this.cartService.addToCart(item);
+    }
+  }
+
+  onGenderChange(event: MatRadioChange, item: Product) {
+    const index = this.productsArray.findIndex((product) => product.id === item.id);
+    if (index !== -1) {
+      this.productsArray[index].selectedGender = event.value;
     }
   }
 

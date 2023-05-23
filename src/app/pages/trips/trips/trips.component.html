@@ -44,8 +44,13 @@
                     <mat-icon svgIcon="star" style="color: #FF9900;"></mat-icon>
                     <mat-icon svgIcon="star" style="color: #FF9900;"></mat-icon>
                   </div>
-                <p class="card-text" style="font-size: 18px; color: black; margin-top: 20px;">Size</p>
-                
+                <p style="margin-bottom: 20px;"></p>
+                <!-- Gender -->
+                <mat-radio-group [name]="'gender-' + item.id" [(ngModel)]="item.selectedGender">
+                <mat-radio-button value="Men">Men</mat-radio-button>
+                <mat-radio-button value="Woman">Woman</mat-radio-button>
+                </mat-radio-group>
+
                 <!-- Size -->
                 <p class="card-text" style="font-size: 18px; color: black; margin-top: 20px;">Size</p>
                 <mat-radio-group [name]="'size-' + item.id" [(ngModel)]="item.selectedSize">

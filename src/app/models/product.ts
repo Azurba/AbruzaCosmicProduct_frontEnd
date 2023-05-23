@@ -6,6 +6,7 @@ export class Product{
     rating? : number;
     price? : number;
     image? : string;
+    selectedGender? : string;
     selectedSize? : string;
     selectedColor? : string;
 }
