@@ -48,7 +48,7 @@ export class TripsComponent {
     // this.productService.getAllProducts().subscribe(result =>{
     //   this.productsArray = result;
     // });
-    this.productService.getProductsByType('tshirts').subscribe(result =>{
+    this.productService.getProductsByType('book').subscribe(result =>{
       this.productsArray = result;
     });
   }

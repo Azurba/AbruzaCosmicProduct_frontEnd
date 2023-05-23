@@ -333,51 +333,291 @@ Poster
 
 
 Hat and Bennies
-https://m.media-amazon.com/images/I/717TM5fGDgL._AC_UX679_.jpg
-https://m.media-amazon.com/images/I/81QgjVjiwfL._AC_UX679_.jpg
-https://m.media-amazon.com/images/I/81jCjoja--L._AC_UX679_.jpg
-https://m.media-amazon.com/images/I/714VWO9bP3L._AC_UX679_.jpg
-https://m.media-amazon.com/images/I/61Qj1Nbcb6L._AC_UX679_.jpg
-https://m.media-amazon.com/images/I/71E+FC6Zx-L._AC_UX679_.jpg
-https://m.media-amazon.com/images/I/71ak5ztY2tL._AC_UX679_.jpg
-https://m.media-amazon.com/images/I/51Nm1EKAAqL._AC_UX679_.jpg
-https://m.media-amazon.com/images/I/81zADLUYZ5L._AC_UX679_.jpg
-https://m.media-amazon.com/images/I/61owjQSkL4L._AC_UX679_.jpg
-https://m.media-amazon.com/images/I/71BUj4hZKZL._AC_UX679_.jpg
-https://m.media-amazon.com/images/I/61qEhoOys7L._AC_UX679_.jpg
-https://m.media-amazon.com/images/I/718vSMg2BEL._AC_UX679_.jpg
-https://m.media-amazon.com/images/I/61sOn14zjuL._AC_UX679_.jpg
-https://m.media-amazon.com/images/I/817jYAK70dL._AC_UX679_.jpg
-https://m.media-amazon.com/images/I/71lYgseAFrL._AC_UX679_.jpg
+
+{
+  "id": 0,
+  "type": "hat",
+  "name": "Cosmo Bucket Hat",
+  "quantity": 0,
+  "description": "100% Polyester. Hand wash only. One size fit most",
+  "rating": 5,
+  "price": 9.99,
+  "image": "https://m.media-amazon.com/images/I/717TM5fGDgL._AC_UX679_.jpg"
+}
+
+{
+  "id": 0,
+  "type": "hat",
+  "name": "Astronaut Hat",
+  "quantity": 0,
+  "description": "100% Cotton. Hand wash only. One size fit most",
+  "rating": 5,
+  "price": 12.99,
+  "image": "https://m.media-amazon.com/images/I/81QgjVjiwfL._AC_UX679_.jpg"
+}
+
+{
+  "id": 0,
+  "type": "hat",
+  "name": "Nasa Hat",
+  "quantity": 0,
+  "description": "100% Cotton. Hand wash only. One size fit most",
+  "rating": 5,
+  "price": 12.99,
+  "image": "https://m.media-amazon.com/images/I/81jCjoja--L._AC_UX679_.jpg"
+}
+
+{
+  "id": 0,
+  "type": "hat",
+  "name": "Universe Hat",
+  "quantity": 0,
+  "description": "100% Cotton. Hand wash only. One size fit most",
+  "rating": 5,
+  "price": 14.99,
+  "image": "https://m.media-amazon.com/images/I/714VWO9bP3L._AC_UX679_.jpg"
+}
+
+{
+  "id": 0,
+  "type": "hat",
+  "name": "Alien Bucker Hat",
+  "quantity": 0,
+  "description": "100% Polyester. Hand wash only. One size fit most",
+  "rating": 5,
+  "price": 10.99,
+  "image": "https://m.media-amazon.com/images/I/61Qj1Nbcb6L._AC_UX679_.jpg"
+}
+
+{
+  "id": 0,
+  "type": "hat",
+  "name": "Skull Astronaut USA Flag Hat",
+  "quantity": 0,
+  "description": "100% Polyester. Hand wash only. One size fit most",
+  "rating": 5,
+  "price": 10.99,
+  "image": "https://m.media-amazon.com/images/I/71E+FC6Zx-L._AC_UX679_.jpg"
+}
+
+
+{
+  "id": 0,
+  "type": "hat",
+  "name": "Space Force Hat",
+  "quantity": 0,
+  "description": "100% Polyester. Hand wash only. One size fit most",
+  "rating": 5,
+  "price": 10.99,
+  "image": "https://m.media-amazon.com/images/I/71ak5ztY2tL._AC_UX679_.jpg"
+}
+
+{
+  "id": 0,
+  "type": "hat",
+  "name": "SpaceX Hat",
+  "quantity": 0,
+  "description": "100% Polyester. Hand wash only. One size fit most",
+  "rating": 5,
+  "price": 10.99,
+  "image": "https://m.media-amazon.com/images/I/51Nm1EKAAqL._AC_UX679_.jpg"
+}
+
+{
+  "id": 0,
+  "type": "hat",
+  "name": "Alien Spaceship Hat",
+  "quantity": 0,
+  "description": "100% Polyester. Hand wash only. One size fit most",
+  "rating": 5,
+  "price": 10.99,
+  "image": "https://m.media-amazon.com/images/I/81zADLUYZ5L._AC_UX679_.jpg"
+}
+
+{
+  "id": 0,
+  "type": "hat",
+  "name": "Original Nasa Hat",
+  "quantity": 0,
+  "description": "100% Polyester. Hand wash only. One size fit most",
+  "rating": 5,
+  "price": 10.99,
+  "image": "https://m.media-amazon.com/images/I/61owjQSkL4L._AC_UX679_.jpg"
+}
+
+{
+  "id": 0,
+  "type": "hat",
+  "name": "Nasa Bennie",
+  "quantity": 0,
+  "description": "100% Cotton. Hand wash only. One size fit most",
+  "rating": 5,
+  "price": 9.99,
+  "image": "https://m.media-amazon.com/images/I/71BUj4hZKZL._AC_UX679_.jpg"
+}
+
+{
+  "id": 0,
+  "type": "hat",
+  "name": "Astronaut Bennie",
+  "quantity": 0,
+  "description": "100% Cotton. Hand wash only. One size fit most",
+  "rating": 4,
+  "price": 9.99,
+  "image": "https://m.media-amazon.com/images/I/718vSMg2BEL._AC_UX679_.jpg"
+}
+
+{
+  "id": 0,
+  "type": "hat",
+  "name": "Solar System Bennie",
+  "quantity": 0,
+  "description": "100% Cotton. Hand wash only. One size fit most",
+  "rating": 5,
+  "price": 9.99,
+  "image": "https://m.media-amazon.com/images/I/61sOn14zjuL._AC_UX679_.jpg"
+}
+
+{
+  "id": 0,
+  "type": "hat",
+  "name": "Nasa Blue Bennie",
+  "quantity": 0,
+  "description": "100% Cotton. Hand wash only. One size fit most",
+  "rating": 4,
+  "price": 9.99,
+  "image": "https://m.media-amazon.com/images/I/817jYAK70dL._AC_UX679_.jpg"
+}
+
+{
+  "id": 0,
+  "type": "hat",
+  "name": "Green Alien Bennie",
+  "quantity": 0,
+  "description": "100% Cotton. Hand wash only. One size fit most",
+  "rating": 5,
+  "price": 9.99,
+  "image": "https://m.media-amazon.com/images/I/71lYgseAFrL._AC_UX679_.jpg"
+}
+
 
 Space Suit
 
 {
   "id": 0,
   "type": "spaceSuit",
-  "name": "NASA Real Space Suit",
+  "name": "NASA Real Space Suit - Collector Edition",
   "quantity": 0,
   "description": "High Quality low-glare satin finish paper. 30 x 30 inches (76.2 x 76.2 cm)",
-  "rating": 5,
+  "rating": 0,
   "price": 65000,
   "image": "https://ids.si.edu/ids/deliveryService?id=NASM-A19730040000-NASM2018-02096&max=900"
 }
 
 Telescope
-https://m.media-amazon.com/images/I/71k61KBLufL._AC_SX679_.jpg
-https://cdn.shopify.com/s/files/1/1979/5379/products/050234110693-_NexStar_8SE_11069_1_570x380_2x_4c9f9202-bdf4-4787-ac2a-f9f59afc4d54_480x480.jpg?v=1519455217
-https://cdn.shopify.com/s/files/1/1979/5379/products/12092_NexStar_Evolution_9_1_570x380_2x_1_480x480.jpg?v=1518554392
-https://cdn.shopify.com/s/files/1/1979/5379/products/evscope2-alt_3000x_png_480x480.webp?v=1668788208
-https://cdn.shopify.com/s/files/1/1979/5379/products/22460_StarSense_Explorer_DX_102_05_570x380_2x_12875d96-556f-4e8d-957b-e4cccd5250c7_480x480.jpg?v=1662522018
-https://cdn.shopify.com/s/files/1/1979/5379/products/Flextube250_Main_1800x1800_6e80e281-9a62-4102-b9a6-f4e01eec3dc4_480x480.jpg?v=1632854772
-https://cdn.shopify.com/s/files/1/1979/5379/products/lx90_8in_frontright_0810-90-03_480x480.jpg?v=1529383427
+
+{
+  "id": 0,
+  "type": "telescope",
+  "name": "Gskyer Telescope",
+  "quantity": 0,
+  "description": "70mm Aperture 400mm AZ Mount Astronomical Refracting Telescope for Kids Beginners ",
+  "rating": 0,
+  "price": 129.99,
+  "image": "https://m.media-amazon.com/images/I/71k61KBLufL._AC_SX679_.jpg"
+}
+
+{
+  "id": 0,
+  "type": "telescope",
+  "name": "Celestron NexStar 6SE SCT",
+  "quantity": 0,
+  "description": "Celestron’s iconic “orange tube” design is updated with all the latest features to provide the best stargazing experience for beginners and experienced observers alike.",
+  "rating": 0,
+  "price": 1099,
+  "image": "https://cdn.shopify.com/s/files/1/1935/4371/products/050234110686_NexStar_6SE_11068_1_570x380@2x.jpg?v=1529944202"
+}
+
+{
+  "id": 0,
+  "type": "telescope",
+  "name": "10" Flextube 250P Collapsible Dobsonian",
+  "quantity": 0,
+  "description": "10″ (254 mm) Dobsonian-style Newtonian. 200 mm focal length (f/4.7). ",
+  "rating": 0,
+  "price": 10099,
+  "image": "https://cdn.shopify.com/s/files/1/1935/4371/products/050234110686_NexStar_6SE_11068_1_570x380@2x.jpg?v=1529944202"
+}
+
+{
+  "id": 0,
+  "type": "telescope",
+  "name": "10 inches Flextube 250P Collapsible Dobsonian",
+  "quantity": 0,
+  "description": "70mm Aperture 400mm AZ Mount Astronomical Refracting Telescope for Kids Beginners ",
+  "rating": 0,
+  "price": 10099,
+  "image": "https://cdn.shopify.com/s/files/1/1979/5379/products/Flextube250_Main_1800x1800_6e80e281-9a62-4102-b9a6-f4e01eec3dc4_480x480.jpg?v=1632854772"
+}
 
 Books
-https://m.media-amazon.com/images/I/616zfYX3M9L._SX382_BO1,204,203,200_.jpg
-https://m.media-amazon.com/images/I/61j+AB3GUoL.jpg
-https://m.media-amazon.com/images/I/512EkN83rtL.jpg
-https://m.media-amazon.com/images/I/61KuJc12KGL.jpg
-https://m.media-amazon.com/images/I/615uLHWGWLL.jpg
+
+{
+  "id": 0,
+  "type": "book",
+  "name": "Space Atlas (Special Sales Edition)",
+  "quantity": 0,
+  "description": "National Geographic; First Edition (November 6, 2012). English",
+  "rating": 4,
+  "price": 17.30,
+  "image": "https://m.media-amazon.com/images/I/616zfYX3M9L._SX382_BO1,204,203,200_.jpg"
+}
+
+{
+  "id": 0,
+  "type": "book",
+  "name": "Astrophysics for People in a Hurry",
+  "quantity": 0,
+  "description": "Celebrity scientist Tyson's profound intellect is matched by his charm and wit. In this slim title, he attempts to explain some of the most complex astrophysics concepts in layman's terms. Readers should be prepared for a challenging yet edifying experience from the get-go",
+  "rating": 4,
+  "price": 9.48,
+  "image": "https://m.media-amazon.com/images/I/61j+AB3GUoL.jpg"
+}
+
+{
+  "id": 0,
+  "type": "book",
+  "name": "Cosmic Queries",
+  "quantity": 0,
+  "description": "Legendary astrophysicist NEIL DEGRASSE TYSON is the host of the popular podcast StarTalk Radio and Emmy award-winning National Geographic Channel shows StarTalk and Cosmos. He earned his BA in physics from Harvard and his Ph.D. in astrophysics from Columbia.",
+  "rating": 5,
+  "price": 19.08,
+  "image": "https://m.media-amazon.com/images/I/512EkN83rtL.jpg"
+}
+
+{
+  "id": 0,
+  "type": "book",
+  "name": "Death by Black Hole: And Other Cosmic Quandaries",
+  "quantity": 0,
+  "description": "Loyal readers of the monthly "Universe" essays in Natural History magazine have long recognized Neil deGrasse Tyson's talent for guiding them through the mysteries of the cosmos with clarity and enthusiasm. Bringing together more than forty of Tyson's favorite essays, Death by Black Hole explores a myriad of cosmic topics, from what it would be like to be inside a black hole to the movie industry's feeble efforts to get its night skies right. One of America's best-known astrophysicists, Tyson is a natural teacher who simplifies the complexities of astrophysics while sharing his infectious fascination for our universe.",
+  "rating": 5,
+  "price": 13.95,
+  "image": "https://m.media-amazon.com/images/I/51KzoVE+GJL._SY344_BO1,204,203,200_.jpg"
+}
+
+{
+  "id": 0,
+  "type": "book",
+  "name": "Death by Black Hole: And Other Cosmic Quandaries",
+  "quantity": 0,
+  "description": "Loyal readers of the monthly "Universe" essays in Natural History magazine have long recognized Neil deGrasse Tyson's talent for guiding them through the mysteries of the cosmos with clarity and enthusiasm. Bringing together more than forty of Tyson's favorite essays, Death by Black Hole explores a myriad of cosmic topics, from what it would be like to be inside a black hole to the movie industry's feeble efforts to get its night skies right. One of America's best-known astrophysicists, Tyson is a natural teacher who simplifies the complexities of astrophysics while sharing his infectious fascination for our universe.",
+  "rating": 5,
+  "price": 13.95,
+  "image": "
+https://m.media-amazon.com/images/I/615uLHWGWLL.jpg"
+}
+
 https://cdn.shopify.com/s/files/1/1979/5379/products/9781554071470-us_480x480.jpg?v=1541462724
 https://cdn.shopify.com/s/files/1/1979/5379/products/screen-shot-2021-07-05-at-11.12.47-am_480x480.png?v=1635186775
 https://cdn.shopify.com/s/files/1/1979/5379/products/LPNS40Ret_480x480.jpg?v=1561642621
