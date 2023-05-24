@@ -23,6 +23,7 @@ import { TelescopesComponent } from './pages/telescopes/telescopes.component';
 import { SpaceSuitComponent } from './pages/space-suit/space-suit.component';
 import { BooksComponent } from './pages/books/books.component';
 import { Depoimentos } from './Data/Depoimentos';
+import { ProductCardComponent } from './pages/product-card/product-card.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { Depoimentos } from './Data/Depoimentos';
     PostersComponent,
     TelescopesComponent,
     SpaceSuitComponent,
-    BooksComponent
+    BooksComponent,
+    ProductCardComponent
   ],
   imports: [
     BrowserModule,

@@ -13,14 +13,14 @@ import { BooksComponent } from './pages/books/books.component';
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: '', redirectTo: 'home', pathMatch: 'full'},
-  {path: 'trips', component: TripsComponent},
+  {path: 'trip', component: TripsComponent},
   {path: 'cart', component: CartComponent},
   {path: 'tshirts', component: TshirtsComponent},
-  {path: 'hats', component: HatsComponent},
-  {path: 'posters', component: PostersComponent},
-  {path: 'telescopes', component: TelescopesComponent},
+  {path: 'hat', component: HatsComponent},
+  {path: 'poster', component: PostersComponent},
+  {path: 'telescope', component: TelescopesComponent},
   {path: 'spaceSuit', component: SpaceSuitComponent},
-  {path: 'books', component: BooksComponent}
+  {path: 'book', component: BooksComponent}
 ];
 
 @NgModule({
