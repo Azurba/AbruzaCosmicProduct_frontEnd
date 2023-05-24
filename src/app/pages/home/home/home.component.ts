@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+import { Router } from '@angular/router';
 import { Depoimentos } from 'src/app/Data/Depoimentos';
 import { Depoimento } from 'src/app/models/Depoimento';
 
@@ -20,7 +21,7 @@ export class HomeComponent {
     "assets/img/stars.jpg"
   ];
 
-  constructor(private _depoimentos : Depoimentos, private sanitizer: DomSanitizer){
+  constructor(private _depoimentos : Depoimentos, private sanitizer: DomSanitizer, private router: Router){
     this.depoimentosArray = _depoimentos.depoimentosArray;
     this.chunkedDepoimentosArray = this.chunkArray(this.depoimentosArray, 4);
   }
@@ -51,7 +52,8 @@ export class HomeComponent {
     }
     return this.sanitizer.bypassSecurityTrustHtml(stars);
   }
-  
-  
 
+  redirect(link : string){
+    this.router.navigateByUrl(link);
+  }
 }
