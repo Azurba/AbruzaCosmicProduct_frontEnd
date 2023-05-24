@@ -1,7 +1,7 @@
 
 <!-- HERO -->
 
-<div id="carouselExampleIndicators" class="carousel slide">
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="8000">
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -18,14 +18,6 @@
         <img src="assets/img/iss.JPG" class="d-block w-100" style="height: 800px;" alt="...">
       </div>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
 </div>
 
 <!-- Features -->
@@ -88,21 +80,28 @@
 </div>
 
 <!-- Ratings -->
-<div class="row partners">
-    <div class="feature-box col-lg-3">
-        <img src="assets/img/nasa.png" alt="" style="height: 100px; width: 130px; margin-bottom: 15px;">
-        <h1>NASA</h1>
+
+<div style="background-image: url('assets/img/stars.jpg')">
+  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="8000">
+    <div class="carousel-inner">
+      <div class="carousel-item" *ngFor="let item of chunkedDepoimentosArray; let i = index" [ngClass]="{ 'active': i === 0 }">
+        <div class="row justify-content-center" style="padding-top: 40px; padding-bottom: 40px;">
+          <div class="col-auto" *ngFor="let depoimento of item">
+            <div class="card" style="background-image: url('assets/img/stars.jpg')">
+              <div class="card-body text-center">
+                <h4 style="margin-bottom: 10px; font-weight: bolder; color: white">{{ depoimento.name }}</h4>
+                <p class="card-text" style="margin-top: 10px;">{{ depoimento.date }}</p>
+                <div *ngIf="depoimento.rate === 1" [innerHTML]="getRatingStars(depoimento.rate)"></div>
+                <div *ngIf="depoimento.rate === 2" [innerHTML]="getRatingStars(depoimento.rate)"></div>
+                <div *ngIf="depoimento.rate === 3" [innerHTML]="getRatingStars(depoimento.rate)"></div>
+                <div *ngIf="depoimento.rate === 4" [innerHTML]="getRatingStars(depoimento.rate)"></div>
+                <div *ngIf="depoimento.rate === 5" [innerHTML]="getRatingStars(depoimento.rate)"></div>
+                <p class="card-text" style="margin-top: 10px;">{{ depoimento.comment }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="feature-box col-lg-3">
-       <img src="assets/img/spaceXLogo.png" alt="" style="height: 50px; width: 300px; margin-bottom: 15px;">
-        <h1>SpaceX</h1>
-      </div>
-      <div class="feature-box col-lg-3">
-       <img src="assets/img/iss.png" alt="" style="height: 105px; width: 105px; margin-bottom: 15px;">
-        <h1>International Space Station</h1>
-      </div>
+    </div>
+  </div>
 </div>
-
-
-
-

@@ -22,6 +22,7 @@ import { PostersComponent } from './pages/posters/posters.component';
 import { TelescopesComponent } from './pages/telescopes/telescopes.component';
 import { SpaceSuitComponent } from './pages/space-suit/space-suit.component';
 import { BooksComponent } from './pages/books/books.component';
+import { Depoimentos } from './Data/Depoimentos';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,7 @@ import { BooksComponent } from './pages/books/books.component';
     MatIconModule,
     FormsModule
   ],
-  providers: [ProductsService, CartService],
+  providers: [ProductsService, CartService, Depoimentos],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
