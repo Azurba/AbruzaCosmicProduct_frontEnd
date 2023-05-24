@@ -1,0 +1,23 @@
+.features{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: rgb(210, 210, 210)
+}
+
+.feature-box {
+    text-align: center;
+}
+
+svg{
+    height: 50px;
+    width: 50px;
+    margin-bottom: 15px;
+    color: black;
+}
+
+h1{
+    color: black
+}
