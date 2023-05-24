@@ -14,6 +14,8 @@ import { ProductsService } from 'src/app/services/products.service';
 })
 export class TshirtsComponent {
   productsArray : Product[] = []
+  isModalOpen : boolean = false;
+  modalItem? : Product;
 
   constructor(private productService : ProductsService, private cartService : CartService, private _snackBar: MatSnackBar, private matIconRegistry : MatIconRegistry, private domSanitizer : DomSanitizer) {
     this.matIconRegistry.addSvgIcon('star', this.domSanitizer.bypassSecurityTrustResourceUrl('/assets/svg/star.svg'))
@@ -54,4 +56,15 @@ export class TshirtsComponent {
       this.productsArray[index].selectedColor = event.value;
     }
   }
+
+  openModal(item: Product) {
+    console.log("clicked")
+    this.modalItem = item;
+    this.isModalOpen = true;
+  }
+
+  closeModal() {
+    this.isModalOpen = false;
+  }
+
 }
