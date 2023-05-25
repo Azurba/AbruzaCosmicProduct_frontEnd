@@ -25,6 +25,7 @@ import { BooksComponent } from './pages/books/books.component';
 import { Depoimentos } from './Data/Depoimentos';
 import { ProductCardComponent } from './pages/product-card/product-card.component';
 import { CheckoutComponent } from './pages/cart/checkout/checkout/checkout.component';
+import { LoginComponent } from './pages/login/login.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { CheckoutComponent } from './pages/cart/checkout/checkout/checkout.compo
     SpaceSuitComponent,
     BooksComponent,
     ProductCardComponent,
-    CheckoutComponent
+    CheckoutComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

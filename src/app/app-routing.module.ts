@@ -10,6 +10,7 @@ import { TelescopesComponent } from './pages/telescopes/telescopes.component';
 import { SpaceSuitComponent } from './pages/space-suit/space-suit.component';
 import { BooksComponent } from './pages/books/books.component';
 import { CheckoutComponent } from './pages/cart/checkout/checkout/checkout.component';
+import { LoginComponent } from './pages/login/login.component';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
@@ -22,7 +23,8 @@ const routes: Routes = [
   {path: 'telescope', component: TelescopesComponent},
   {path: 'spaceSuit', component: SpaceSuitComponent},
   {path: 'book', component: BooksComponent},
-  {path: 'checkout', component: CheckoutComponent}
+  {path: 'checkout', component: CheckoutComponent},
+  {path: 'login', component: LoginComponent}
 ];
 
 @NgModule({
