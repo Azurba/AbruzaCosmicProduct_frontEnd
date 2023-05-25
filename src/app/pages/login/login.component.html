@@ -24,8 +24,42 @@
     </div>
     <p class="signup-link">
         No account?
-        <button type="button" class="btn btn-primary" (click)="isClicked()">Sign-up</button>
+        <button type="button" class="btn btn-primary" (click)="openModal()">Sign-up</button>
     </p>
 </form>
   
+
+<!-- Bootstrap Modal -->
+<div class="modal-backdrop" *ngIf="isModalOpen">
+    <div class="modal" tabindex="-1" role="dialog" [ngClass]="{'show': isModalOpen}" style="display: block;">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="btn btn-danger" (click)="closeModal()">Close</button>
+          </div>
+          <div class="modal-body">
+            <form class="formRegister">
+                <div class="title-2"><span>Sign-Up</span></div>
+                <div class="input-container d-flex justify-content-center">
+                    <input class="input-mail" type="text" placeholder="Enter your name">
+                    <span></span>
+                </div>
+                <div class="input-container d-flex justify-content-center">
+                    <input class="input-mail" type="email" placeholder="Enter email">
+                    <span></span>
+                </div>
+                <div class="input-container d-flex justify-content-center">
+                    <input class="input-pwd" type="password" placeholder="Enter password">
+                </div>
+                <div class="d-flex justify-content-center">
+                    <button type="submit" class="submit">
+                        <span class="sign-text">Register</span>
+                    </button>
+                </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
     

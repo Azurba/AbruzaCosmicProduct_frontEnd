@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class LoginComponent {
 
   register : boolean =  false;
+  isModalOpen : boolean = false;
 
   isClicked(){
     if(this.register == false){
@@ -16,6 +17,13 @@ export class LoginComponent {
     this.register = false
   }
   
+  openModal() {
+    this.isModalOpen = true;
+  }
+
+  closeModal() {
+    this.isModalOpen = false;
+  }
   
 
 }
