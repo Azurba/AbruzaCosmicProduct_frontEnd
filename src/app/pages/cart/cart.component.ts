@@ -19,10 +19,10 @@ export class CartComponent {
     this.finalPrice = 0;
   }
 
-  redirect(){
+  redirect(link : string){
     const random = Math.floor(Math.random() * this.generateRandomLink.length);
     const randomItem = this.generateRandomLink[random].toString();
-    this.router.navigateByUrl('/trips');
+    this.router.navigateByUrl(link);
   }
 
   increaseQuantity(item : Product): void {

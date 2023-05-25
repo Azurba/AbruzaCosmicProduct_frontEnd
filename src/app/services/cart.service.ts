@@ -84,11 +84,6 @@ export class CartService {
     return this.cartItems.map((item) => (item.quantity != null && item.price != null) ? (item.quantity * item.price) : 0).reduce((prev, current) => prev + current, 0)
   }
 
-
-
-  
-
-
   getCartItems(): Product[] {
     return this.cartItems;
   }

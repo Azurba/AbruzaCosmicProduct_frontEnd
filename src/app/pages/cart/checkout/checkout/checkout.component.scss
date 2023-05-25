@@ -1,0 +1,82 @@
+.coolinput {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    position: static;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  
+  .coolinput label.text {
+    font-size: 0.75rem;
+    color: #8a328e;
+    font-weight: 700;
+    position: relative;
+    top: 0.5rem;
+    margin: 0 0 0 7px;
+    padding: 0 3px;
+    background: #ffffff;
+    width: fit-content;
+  }
+  
+  .coolinput input[type=text].input {
+    padding: 11px 10px;
+    font-size: 0.75rem;
+    border: 2px #8a328e solid;
+    border-radius: 5px;
+    background: #ffffff;
+    width: 100%; /* Updated width to 80% */
+    max-width: 100%; /* Added max-width to ensure responsiveness */
+  }
+  
+  
+  .coolinput input[type=text].input:focus {
+    outline: none;
+  }
+  
+  .container {
+    max-width: 1200px;
+  }
+  
+  h1{
+    margin-bottom: 30px;
+    margin-top: 30px;
+  }
+
+  .btn{
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .headerBtn {
+    align-items: center;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 18px;
+    padding: 0.8em 1.3em 0.8em 0.9em;
+    color: white;
+    background: #ad5389;
+    background: linear-gradient(to right, #8a328e, #8a328e, #8a328e);
+    border: none;
+    letter-spacing: 0.05em;
+    border-radius: 16px;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  button svg {
+    margin-right: 10px;
+    transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+  }
+  
+  .headerBtnSpan {
+    transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+  }
+  
+  .headerBtn:hover svg {
+    transform: translateX(5px) rotate(40deg);
+  }
+  
+  button:hover span {
+    transform: translateX(7px);
+  }

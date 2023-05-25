@@ -24,6 +24,7 @@ import { SpaceSuitComponent } from './pages/space-suit/space-suit.component';
 import { BooksComponent } from './pages/books/books.component';
 import { Depoimentos } from './Data/Depoimentos';
 import { ProductCardComponent } from './pages/product-card/product-card.component';
+import { CheckoutComponent } from './pages/cart/checkout/checkout/checkout.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { ProductCardComponent } from './pages/product-card/product-card.componen
     TelescopesComponent,
     SpaceSuitComponent,
     BooksComponent,
-    ProductCardComponent
+    ProductCardComponent,
+    CheckoutComponent
   ],
   imports: [
     BrowserModule,
