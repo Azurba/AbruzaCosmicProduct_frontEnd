@@ -1,0 +1,37 @@
+<div style="background-image: url('assets/img/cartoon.JPG'); background-repeat: no-repeat; background-size: cover;">
+    <div class="row justify-content-center">
+        <h1>About us</h1>
+        <div *ngFor="let paragraph of about" style="justify-content: center; align-items: center;">
+            <p style="margin-left: 160px; margin-right: 160px;">{{paragraph}}</p>
+        </div>
+        <h1>Size Chart</h1>
+        <div class="img">
+            <img src="assets/img/sizeChart.JPG" alt="">
+            <p style="margin-top: 20px;">All measurements are in centimeters</p>
+            <p>Hats and bennies: one size fits most</p>
+        </div>
+        <div class="btns">
+            <h1>Policies</h1>
+            <button type="button" class="btn btn-warning" (click)="openModal('delivery')">Delivery Policies</button>
+            <button type="button" class="btn btn-warning" (click)="openModal('returnP')">Return Policies</button>
+        </div>
+    </div>
+</div>
+
+
+<!-- Bootstrap Modal -->
+<div class="modal-backdrop" *ngIf="isModalOpen">
+    <div class="modal" tabindex="-1" role="dialog" [ngClass]="{'show': isModalOpen}" style="display: block;">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="btn btn-danger" (click)="closeModal()">Close</button>
+          </div>
+          <div class="modal-body">
+            <p>{{modalItem}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+

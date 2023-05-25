@@ -11,6 +11,7 @@ import { SpaceSuitComponent } from './pages/space-suit/space-suit.component';
 import { BooksComponent } from './pages/books/books.component';
 import { CheckoutComponent } from './pages/cart/checkout/checkout/checkout.component';
 import { LoginComponent } from './pages/login/login.component';
+import { AboutComponent } from './pages/about/about.component';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
@@ -24,7 +25,8 @@ const routes: Routes = [
   {path: 'spaceSuit', component: SpaceSuitComponent},
   {path: 'book', component: BooksComponent},
   {path: 'checkout', component: CheckoutComponent},
-  {path: 'login', component: LoginComponent}
+  {path: 'login', component: LoginComponent},
+  {path: 'about', component: AboutComponent}
 ];
 
 @NgModule({

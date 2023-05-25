@@ -27,6 +27,7 @@ import { ProductCardComponent } from './pages/product-card/product-card.componen
 import { CheckoutComponent } from './pages/cart/checkout/checkout/checkout.component';
 import { LoginComponent } from './pages/login/login.component';
 import { FooterComponent } from './footer/footer.component';
+import { AboutComponent } from './pages/about/about.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { FooterComponent } from './footer/footer.component';
     ProductCardComponent,
     CheckoutComponent,
     LoginComponent,
-    FooterComponent
+    FooterComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
