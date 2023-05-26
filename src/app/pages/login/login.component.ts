@@ -11,14 +11,16 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class LoginComponent {
 
-  register : boolean =  false;
-  isModalOpen : boolean = false;
+  //Login related properties
   loginForm!: FormGroup;
-
   isLoginModalOpen : boolean = false;
   errorModalTitle: string = '';
   errorModalMessage: string = '';
 
+  //registration related properties
+  register : boolean =  false;
+  registerForm! : FormGroup;
+  isModalOpen : boolean = false;
   
   constructor(private formBuilder: FormBuilder, private userService: UserService, private router : Router) {}
 
@@ -39,20 +41,25 @@ export class LoginComponent {
       email: ['', [Validators.required, Validators.email]],
       password: ['', Validators.required]
     });
+
+    this.registerForm = this.formBuilder.group({
+      name: ['', [Validators.required]],
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', Validators.required]
+    });
   }
 
-  //scroll down to read all this method is doing
-  onSubmit() {
+  //scroll down to read about all this method is doing
+  onSubmitLogin() {
     if (this.loginForm != undefined) {
       if (this.loginForm.valid) {
         const email = this.loginForm.value.email;
         const password = this.loginForm.value.password;
         this.userService.login(email, password).pipe(
-          catchError((error) => {
-            console.log('Login error:', error);
+          catchError(() => {
             this.openLoginModel();
             this.errorModalTitle = 'Login Error';
-            this.errorModalMessage = 'An error occurred during login. Please try again.';
+            this.errorModalMessage = 'Incorrect email or password. Please try again';
             return of(''); // Return an observable with an empty string as a fallback value
           })
         ).subscribe((response: string) => {
@@ -60,25 +67,21 @@ export class LoginComponent {
             console.log('Login successful');
             console.log('Token:', response);
             this.router.navigateByUrl('/account')
-          } else {
-            console.log('Login error: Empty response');
-            this.openLoginModel();
-            this.errorModalTitle = 'Login Error';
-            this.errorModalMessage = 'Incorrect email or password. Please try again';
           }
         });
       }
     }
   }
-      // if (this.loginForm.valid) {
-      //   const email = this.loginForm.value.email;
-      //   const password = this.loginForm.value.password;
-      //   this.userService.login(email, password);
-      //   console.log('Email:', email);
-      //   console.log('Password:', password);
-      // } else {
-        
-      // }
+
+  onSubmitRegistration(){
+    if(this.registerForm != undefined){
+      if(this.registerForm.valid){
+        console.log(this.registerForm.value.name);
+        console.log(this.registerForm.value.email);
+        console.log(this.registerForm.value.password);
+      }
+    }
+  }
     
   isClicked(){
     if(this.register == false){
@@ -102,9 +105,7 @@ export class LoginComponent {
   closeLoginModel(){
     this.isLoginModalOpen = false;
   }
-
 }
-
 
 
 /*

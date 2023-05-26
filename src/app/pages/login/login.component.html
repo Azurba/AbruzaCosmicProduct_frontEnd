@@ -1,6 +1,6 @@
 
-<form [formGroup]="loginForm" class="form" (ngSubmit)="onSubmit()">
-    <div class="form-title"><span>Sign in to your</span></div>
+<form [formGroup]="loginForm" class="form" (ngSubmit)="onSubmitLogin()">
+    <div class="form-title"><span>Login to your</span></div>
     <div class="title-2"><span>SPACE</span></div>
     <div class="input-container d-flex justify-content-center">
         <input class="input-mail" type="email" placeholder="Enter email" formControlName="email">
@@ -17,7 +17,7 @@
     </div>
     <div class="d-flex justify-content-center">
         <button type="submit" class="submit" [disabled]="!loginForm.valid">
-            <span class="sign-text">Sign in</span>
+            <span class="sign-text">Login</span>
         </button>
     </div>
     <p class="signup-link">
@@ -36,21 +36,21 @@
             <button type="button" class="btn btn-danger" (click)="closeModal()">Close</button>
           </div>
           <div class="modal-body">
-            <form class="formRegister">
+            <form [formGroup]="registerForm" class="formRegister" (ngSubmit)="onSubmitRegistration()">
                 <div class="title-2"><span>Sign-Up</span></div>
                 <div class="input-container d-flex justify-content-center">
-                    <input class="input-mail" type="text" placeholder="Enter your name">
+                    <input class="input-mail" type="text" placeholder="Enter your name" formControlName="name">
                     <span></span>
                 </div>
                 <div class="input-container d-flex justify-content-center">
-                    <input class="input-mail" type="email" placeholder="Enter email">
+                    <input class="input-mail" type="email" placeholder="Enter email" formControlName="email">
                     <span></span>
                 </div>
                 <div class="input-container d-flex justify-content-center">
-                    <input class="input-pwd" type="password" placeholder="Enter password">
+                    <input class="input-pwd" type="password" placeholder="Enter password" formControlName="password">
                 </div>
                 <div class="d-flex justify-content-center">
-                    <button type="submit" class="submit">
+                    <button type="submit" class="submit" [disabled]="!registerForm.valid">
                         <span class="sign-text">Register</span>
                     </button>
                 </div>
