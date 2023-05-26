@@ -13,6 +13,7 @@ export class CheckoutComponent {
  
   cartItems : Product[] = [];
   cartTotal : number = 0;
+  isModalOpen : boolean = false;
 
   constructor(cartService : CartService, private userService : UserService, private router : Router) {
     this.cartItems = cartService.getCartItems();
@@ -24,11 +25,18 @@ export class CheckoutComponent {
   }
 
   redirectAcc(){
-    console.log(this.userService._email)
     if(this.userService._email === undefined){
       this.router.navigateByUrl('/login');
     }else{
-      this.router.navigateByUrl('/account');
+      this.openModal();
     }
+  }
+
+  openModal(){
+    this.isModalOpen = true;
+  }
+
+  closeModal(){
+    this.isModalOpen = false;
   }
 }

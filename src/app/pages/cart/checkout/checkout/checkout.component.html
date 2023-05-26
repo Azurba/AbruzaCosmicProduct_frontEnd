@@ -109,3 +109,21 @@
         </div>
     </div>
 </div>
+
+
+<div class="modal-backdrop" *ngIf="isModalOpen">
+    <div class="modal" tabindex="-1" role="dialog" [ngClass]="{'show': isModalOpen}" style="display: block;">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button (click)="redirect('/home')" type="button" class="btn btn-success">Home</button>
+            <h1 style="font-size: 30px;">Thank you! Your order is confirmed!</h1>
+            <button (click)="redirect('/account')" type="button" class="btn btn-success">Account</button>
+          </div>
+          <div class="modal-body" style="background-image: url('assets/img/dab2.JPG'); background-repeat: no-repeat; background-size: cover;  height: 800px; width: 100%;">
+            <h1 style="font-size: 27px; color: black; font-weight: bolder;">An e-mail with the details of the purchase has been sent to you!</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
