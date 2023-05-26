@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { OrderHistory } from 'src/app/models/orderHistory';
 import { User } from 'src/app/models/user';
 import { UserService } from 'src/app/services/user.service';
 
@@ -10,6 +11,7 @@ import { UserService } from 'src/app/services/user.service';
 export class AccountComponent {
   
   user? : User;
+  orderHistory : OrderHistory[] = [];
 
   constructor(private userService : UserService){
     console.log()
@@ -17,6 +19,7 @@ export class AccountComponent {
 
   ngOnInit(): void {
     this.getUserDetails();
+    this.getOrderDetails();
   }
   
 
@@ -30,5 +33,16 @@ export class AccountComponent {
         console.log('Error:', error);
       }
     });
+  }
+
+  getOrderDetails(){
+    this.userService.getOrderHistory().subscribe(
+      (data: OrderHistory[]) => {
+        this.orderHistory = data;
+      },
+      (error) => {
+        console.error('Failed to retrieve order history:', error);
+      }
+    );
   }
 }
