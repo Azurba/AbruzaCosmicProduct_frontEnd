@@ -27,7 +27,7 @@
 </form>
   
 
-<!-- Bootstrap Modal -->
+<!-- Bootstrap Register Modal -->
 <div class="modal-backdrop" *ngIf="isModalOpen">
     <div class="modal" tabindex="-1" role="dialog" [ngClass]="{'show': isModalOpen}" style="display: block;">
       <div class="modal-dialog modal-lg">
@@ -55,6 +55,22 @@
                     </button>
                 </div>
             </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap Login Error Modal -->
+<div class="modal-backdrop" *ngIf="isLoginModalOpen">
+    <div class="modal" tabindex="-1" role="dialog" [ngClass]="{'show': isModalOpen}" style="display: block;">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="btn btn-danger" (click)="closeLoginModel()">Close</button>
+          </div>
+          <div class="modal-body">
+            <p>{{errorModalMessage}}</p>
           </div>
         </div>
       </div>
