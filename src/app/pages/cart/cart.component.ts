@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { Product } from 'src/app/models/product';
 import { CartService } from 'src/app/services/cart.service';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-cart',
@@ -14,7 +15,7 @@ export class CartComponent {
   generateRandomLink : String[] = ['/trips', '/courses', '/books', '/items'];
   finalPrice : number;
 
-  constructor(private cartService: CartService, private router: Router) {
+  constructor(private cartService: CartService, private router: Router, private userService : UserService) {
     this.cartItems = this.cartService.getCartItems();
     this.finalPrice = 0;
   }

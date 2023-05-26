@@ -8,7 +8,7 @@ import { Observable, catchError, throwError } from 'rxjs';
 })
 export class UserService {
 
-  _email : string = '';
+  _email? : string;
 
   constructor(private http : HttpClient) {
     console.log(this._email);
