@@ -1,0 +1,27 @@
+<mat-tab-group animationDuration="2000ms">
+    <mat-tab label="Account Details">Content 1
+        <div class="container">
+            <div class="row justify-content-center">
+                <h1>Hello Joao</h1>
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Password</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Joao</td>
+                        <td>joaoh.pimenta.giudice@gmail.com</td>
+                        <td>{{transformPassword('12345')}}</td>
+                        <td><button type="button" class="btn btn-warning">Change Password</button></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </mat-tab>
+    <mat-tab label="Order History">Content 2</mat-tab>
+</mat-tab-group>

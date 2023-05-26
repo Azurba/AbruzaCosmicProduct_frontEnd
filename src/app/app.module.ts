@@ -28,6 +28,8 @@ import { CheckoutComponent } from './pages/cart/checkout/checkout/checkout.compo
 import { LoginComponent } from './pages/login/login.component';
 import { FooterComponent } from './footer/footer.component';
 import { AboutComponent } from './pages/about/about.component';
+import { AccountComponent } from './pages/account/account.component';
+import {MatTabsModule} from '@angular/material/tabs';
 
 @NgModule({
   declarations: [
@@ -46,7 +48,8 @@ import { AboutComponent } from './pages/about/about.component';
     CheckoutComponent,
     LoginComponent,
     FooterComponent,
-    AboutComponent
+    AboutComponent,
+    AccountComponent
   ],
   imports: [
     BrowserModule,
@@ -57,7 +60,8 @@ import { AboutComponent } from './pages/about/about.component';
     MatBadgeModule,
     MatRadioModule,
     MatIconModule,
-    FormsModule
+    FormsModule,
+    MatTabsModule
   ],
   providers: [ProductsService, CartService, Depoimentos],
   bootstrap: [AppComponent]

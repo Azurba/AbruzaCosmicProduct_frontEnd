@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { CartService } from 'src/app/services/cart.service';
 
 @Component({
@@ -10,7 +11,7 @@ export class HeaderComponent {
 
   cartItemsQty = 0;
 
-  constructor(private cartService : CartService){
+  constructor(private cartService : CartService, private router: Router){
 
   }
 
@@ -21,6 +22,8 @@ export class HeaderComponent {
     
   }
 
-  
+  redirect(link : string){
+    this.router.navigateByUrl(link);
+  }
 
 }
