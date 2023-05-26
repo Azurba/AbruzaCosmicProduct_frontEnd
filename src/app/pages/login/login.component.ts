@@ -76,9 +76,24 @@ export class LoginComponent {
   onSubmitRegistration(){
     if(this.registerForm != undefined){
       if(this.registerForm.valid){
+        const name = this.registerForm.value.name;
+        const email = this.registerForm.value.email;
+        const password = this.registerForm.value.password;
         console.log(this.registerForm.value.name);
         console.log(this.registerForm.value.email);
         console.log(this.registerForm.value.password);
+        this.userService.registration(name, email, password).subscribe({
+          next: (response: string) => {
+            console.log('Registration successful:', response);
+            this.router.navigateByUrl('/account')
+          },
+          error: (error: any) => {
+            console.error('Registration error:', error);
+            this.openLoginModel();
+            this.errorModalTitle = 'Registration Error';
+            this.errorModalMessage = 'Oops! Something went wrong when we tried to register you. Please try again later.';
+          }
+        });
       }
     }
   }

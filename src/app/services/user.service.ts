@@ -25,6 +25,11 @@ export class UserService {
         })
       );
   }
+
+  public registration(name : string, email : string, password : string){
+    const request = {name, email, password}
+    return this.http.post<string>(`https://localhost:7170/api/User/register`, request);
+  }
 }
 
 //return this.http.post<string>(`https://localhost:7170/api/User/login`, request);
