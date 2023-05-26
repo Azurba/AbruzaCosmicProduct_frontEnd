@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { User } from 'src/app/models/user';
 import { UserService } from 'src/app/services/user.service';
 
 @Component({
@@ -8,38 +9,26 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class AccountComponent {
   
+  user? : User;
 
-  // constructor(private userService : UserService, private){}
-
-  // ngOnInit(): void {
-  //   this.getUserDetails();
-    
-  // }
-
-  // getUserDetails() {
-  //   this.userService.getUserByEmail().subscribe(
-  //     (user: User) => {
-  //       this.user = user;
-  //       console.log('User:', this.user);
-  //     },
-  //     (error) => {
-  //       console.log('Error:', error);
-  //     }
-  //   );
-  // }
-
-  transformPassword(password : string){
-    let n: number = password.length;
-    let nPassword: string = '';
-
-    while (n > 0) {
-      nPassword += '*';
-      n--;
-    }
-
-    return nPassword;
+  constructor(private userService : UserService){
+    console.log()
   }
 
+  ngOnInit(): void {
+    this.getUserDetails();
+  }
+  
 
-
+  getUserDetails() {
+    this.userService.getUserByEmail().subscribe({
+      next: (user: User) => {
+        this.user = user;
+        console.log('User:', this.user);
+      },
+      error: (error) => {
+        console.log('Error:', error);
+      }
+    });
+  }
 }
