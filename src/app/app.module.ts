@@ -30,6 +30,10 @@ import { FooterComponent } from './footer/footer.component';
 import { AboutComponent } from './pages/about/about.component';
 import { AccountComponent } from './pages/account/account.component';
 import {MatTabsModule} from '@angular/material/tabs';
+import { User } from './models/user';
+import { UserService } from './services/user.service';
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -61,9 +65,10 @@ import {MatTabsModule} from '@angular/material/tabs';
     MatRadioModule,
     MatIconModule,
     FormsModule,
-    MatTabsModule
+    MatTabsModule,
+    ReactiveFormsModule
   ],
-  providers: [ProductsService, CartService, Depoimentos],
+  providers: [ProductsService, CartService, Depoimentos, User, UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
