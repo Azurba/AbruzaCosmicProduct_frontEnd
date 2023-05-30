@@ -33,17 +33,17 @@
                         <th scope="col">Product</th>
                         <th scope="col">Total</th>
                         <th scope="col">Date</th>
-                        <th scope="col">Ship To</th>
-                        <th scope="col">Payment Method</th>
+                        <th scope="col">Shipped To</th>
+                        <th scope="col">Payment Method (Last 4 digits)</th>
                     </tr>
                     </thead>
                     <tbody>
                     <tr *ngFor="let order of orderHistory">
-                        <td>order date</td>
-                        <td>product name</td>
-                        <td>product price / total</td>
-                        <td>{{order.address}}</td>
-                        <td>{{order.address}}</td>
+                        <td>{{order.product}}</td>
+                        <td>{{order.total}}</td>
+                        <td>{{order.date}}</td>
+                        <td>{{order.address}} - {{order.city}}, {{order.state}}, {{order.country}}</td>
+                        <td>{{order.cardNumber}}</td>
                     </tr>
                     </tbody>
                 </table>

@@ -39,4 +39,8 @@ export class UserService {
   public getOrderHistory(){
     return this.http.get<OrderHistory[]>('https://localhost:7170/api/OrderHistory');
   }
+
+  // public postTotal(){
+  //   return this.http.post<Number>('https://localhost:7170/api/OrderHistory', )
+  // }
 }

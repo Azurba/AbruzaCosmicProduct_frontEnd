@@ -4,6 +4,8 @@ export class OrderHistory{
     id? : number;
     email? : string;
     name? : string;
+    date? : Date;
+    total? : number;
     address? : string;
     phone? : string;
     city? : string;
@@ -11,5 +13,5 @@ export class OrderHistory{
     zipcode? : string;
     country? : string;
     cardNumber? : number;
-    product? : Product
+    product?: number[];
 }

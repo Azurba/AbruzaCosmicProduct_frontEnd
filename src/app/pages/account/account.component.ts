@@ -36,15 +36,15 @@ export class AccountComponent {
     });
   }
 
-  getOrderDetails(){
-    this.userService.getOrderHistory().subscribe(
-      (data: OrderHistory[]) => {
+  getOrderDetails() {
+    this.userService.getOrderHistory().subscribe({
+      next: (data: OrderHistory[]) => {
         this.orderHistory = data;
       },
-      (error) => {
+      error: (error) => {
         console.error('Failed to retrieve order history:', error);
       }
-    );
+    });
   }
 
   logout(){

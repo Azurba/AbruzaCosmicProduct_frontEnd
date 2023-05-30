@@ -39,6 +39,7 @@ export class CartComponent {
   }
 
   getTotal(){
+    
     return this.cartService.getTotal();
   }
 }
