@@ -32,6 +32,10 @@ export class CheckoutComponent {
       state: ['', [Validators.required]],
       country: ['', [Validators.required]],
       zip: ['', [Validators.required]],
+      cardNumber: ['', [Validators.required]],
+      nameCard: ['', [Validators.required]],
+      expiration: ['', [Validators.required]],
+      securityCode: ['', [Validators.required]],
     });
 
     //check if the form is done
@@ -45,8 +49,14 @@ export class CheckoutComponent {
   }
 
   redirectAcc() {
-    console.log(this.orderHistory);
-    this.openModal();
+    //this.openModal();
+    if(this.userService._email === undefined){
+      this.router.navigateByUrl('/login');
+    }else{
+      this.openModal();
+      console.log(this.orderHistory);
+    }
+
   }
 
   openModal() {
@@ -73,6 +83,7 @@ export class CheckoutComponent {
     const state = this.checkoutForm.value.state;
     const country = this.checkoutForm.value.country;
     const zip = this.checkoutForm.value.zip;
+    const cardNumber = this.checkoutForm.value.cardNumber.toString().slice(-4); //get 4 last digits
     const productIds = this.cartItems
       .map((item) => item?.id) // Get the IDs of the products in the cart (including undefined)
       .filter((id) => id !== undefined) as number[];
@@ -88,7 +99,7 @@ export class CheckoutComponent {
       state: state,
       zipcode: zip,
       country: country,
-      cardNumber: 0,
+      cardNumber: cardNumber,
       product: productIds,
     };
   }

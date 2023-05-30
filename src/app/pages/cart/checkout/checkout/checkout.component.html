@@ -61,25 +61,27 @@
                   </svg>
             </div>
             <div class="col">
-                <div class="coolinput">
-                    <label for="cardnumber" class="text">Card Number</label>
-                    <input type="text" placeholder="" name="cardnumber" class="input">
-                </div>
-                <div class="coolinput">
-                    <label for="cardname" class="text">Name on Card</label>
-                    <input type="text" placeholder="" name="cardname" class="input">
-                </div>
-                <div class="coolinput">
-                    <label for="expiration" class="text">Expiration date</label>
-                    <input type="text" placeholder="" name="expiration" class="input">
-                </div>
-                <div class="coolinput">
-                    <label for="securitycode" class="text">Security Code (CVV/CVC)</label>
-                    <input type="text" placeholder="" name="securitycode" class="input">
-                </div>
-                <div class="text-center">
-                    <button (click)="redirectAcc()" type="button" class="btn btn-success" [disabled]="!checkoutForm.valid">Place your Order</button>
-                </div>
+                <form [formGroup]="checkoutForm" (ngSubmit)="onSubmitForm()">
+                    <div class="coolinput">
+                        <label for="cardnumber" class="text">Card Number</label>
+                        <input type="text" placeholder="" name="cardnumber" class="input" formControlName="cardNumber">
+                    </div>
+                    <div class="coolinput">
+                        <label for="cardname" class="text">Name on Card</label>
+                        <input type="text" placeholder="" name="cardname" class="input" formControlName="nameCard">
+                    </div>
+                    <div class="coolinput">
+                        <label for="expiration" class="text">Expiration date</label>
+                        <input type="text" placeholder="" name="expiration" class="input" formControlName="expiration">
+                    </div>
+                    <div class="coolinput">
+                        <label for="securitycode" class="text">Security Code (CVV/CVC)</label>
+                        <input type="text" placeholder="" name="securitycode" class="input" formControlName="securityCode">
+                    </div>
+                    <div class="text-center">
+                        <button (click)="redirectAcc()" type="button" class="btn btn-success" [disabled]="!checkoutForm.valid">Place your Order</button>
+                    </div>
+                </form>
             </div>
         </div>
         <div class="col-6">
