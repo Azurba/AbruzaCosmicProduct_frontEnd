@@ -33,6 +33,7 @@ import {MatTabsModule} from '@angular/material/tabs';
 import { User } from './models/user';
 import { UserService } from './services/user.service';
 import { ReactiveFormsModule } from '@angular/forms';
+import {MatChipsModule} from '@angular/material/chips';
 
 
 @NgModule({
@@ -66,7 +67,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatIconModule,
     FormsModule,
     MatTabsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatChipsModule
   ],
   providers: [ProductsService, CartService, Depoimentos, User, UserService],
   bootstrap: [AppComponent]

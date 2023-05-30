@@ -15,6 +15,8 @@ export class ProductCardComponent {
   productsArray : Product[] = []
   isModalOpen : boolean = false;
   modalItem? : Product;
+  order : string = 'ascending';
+  selected? : string;
 
   constructor(private productService : ProductsService, private cartService : CartService, private matIconRegistry : MatIconRegistry, private domSanitizer : DomSanitizer, private route: ActivatedRoute) {
     this.matIconRegistry.addSvgIcon('star', this.domSanitizer.bypassSecurityTrustResourceUrl('/assets/svg/star.svg'))
@@ -60,5 +62,34 @@ export class ProductCardComponent {
         }
     }
     return this.domSanitizer.bypassSecurityTrustHtml(stars);
+  }
+
+  updateOrder(order : string){
+    this.order = order;
+    console.log(this.order);
+    if(this.selected == 'price'){
+      this.sortBy('price')
+    }
+    if(this.selected == 'rating'){
+      this.sortBy('rating');
+    }
+  }
+
+  sortBy(sorter : string){
+    if (this.productsArray.length > 0) {
+      switch (sorter) {
+        case 'price':
+          this.selected = 'price';
+          this.productsArray.sort((a, b) => (a?.price ?? 0) - (b?.price ?? 0));
+          break;
+        case 'rating':
+          this.selected = 'rating';
+          this.productsArray.sort((a, b) => (a?.rating ?? 0) - (b?.rating ?? 0));
+          break;
+        }
+      if (this.order === 'descending') {
+        this.productsArray.reverse();
+      }
+    }
   }
 }

@@ -167,6 +167,19 @@
     }
   }
 
+  .chips{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 60px;
+  }
+
+  .sort{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+    font-weight: bolder;
+    font-size: 20px;
+  }
 
 
 

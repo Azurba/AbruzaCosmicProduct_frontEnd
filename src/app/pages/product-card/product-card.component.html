@@ -1,4 +1,18 @@
 <div class="row justify-content-center">
+    <div class="sort">Sort By:</div>
+    <div class="chips" style="padding-bottom: 20px;">
+      <mat-chip-listbox aria-label="sortBy">
+        <mat-chip-option [value]="'ascending'" selected (selectionChange)="updateOrder('ascending')">Ascending</mat-chip-option>
+        <mat-chip-option [value]="'descending'"(selectionChange)="updateOrder('descending')">Descending</mat-chip-option>
+      </mat-chip-listbox>
+    </div>
+    
+    <div class="chips">
+      <mat-chip-listbox aria-label="sortBy">
+        <mat-chip-option [value]="'price'" (selectionChange)="sortBy('price')">Price</mat-chip-option>
+        <mat-chip-option [value]="'rating'" (selectionChange)="sortBy('rating')">Rating</mat-chip-option>
+      </mat-chip-listbox>
+    </div>
     <div *ngFor="let item of productsArray" class="col-xs-12 col-lg-3 d-flex justify-content-center">
         <div class="card" style="width: 85%; margin-right: 40px; margin-bottom: 40px; background-color: white; border-color: #8a328e;">
           <div (click)="openModal(item)"><img src={{item.image}} class="card-img-top" alt="..." style="object-fit: contain; width: 100%; height: 250px; padding-top: 30px;"></div>
