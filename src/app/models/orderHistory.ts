@@ -13,5 +13,5 @@ export class OrderHistory{
     zipcode? : string;
     country? : string;
     cardNumber? : number;
-    product?: number[];
+    product? : number;
 }

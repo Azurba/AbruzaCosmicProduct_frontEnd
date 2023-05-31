@@ -56,7 +56,6 @@ export class CheckoutComponent {
       this.openModal();
       console.log(this.orderHistory);
     }
-
   }
 
   openModal() {
@@ -71,6 +70,8 @@ export class CheckoutComponent {
     if (this.checkoutForm != undefined) {
       if (this.checkoutForm.valid) {
         this.updateOrderHistory();
+        console.log(this.orderHistory);
+        this.userService.addOrderHistory(this.orderHistory);
       }
     }
   }
@@ -83,24 +84,6 @@ export class CheckoutComponent {
     const state = this.checkoutForm.value.state;
     const country = this.checkoutForm.value.country;
     const zip = this.checkoutForm.value.zip;
-    const cardNumber = this.checkoutForm.value.cardNumber.toString().slice(-4); //get 4 last digits
-    const productIds = this.cartItems
-      .map((item) => item?.id) // Get the IDs of the products in the cart (including undefined)
-      .filter((id) => id !== undefined) as number[];
-
-    this.orderHistory = {
-      email: this.userService._email,
-      name: name,
-      address: address,
-      total: this.cartTotal,
-      date: new Date(),
-      phone: phone,
-      city: city,
-      state: state,
-      zipcode: zip,
-      country: country,
-      cardNumber: cardNumber,
-      product: productIds,
-    };
+    const cardNumber = this.checkoutForm.value.cardNumber.toString().slice(-4); // get 4 last digits
   }
 }

@@ -40,7 +40,7 @@ export class UserService {
     return this.http.get<OrderHistory[]>('https://localhost:7170/api/OrderHistory');
   }
 
-  // public postTotal(){
-  //   return this.http.post<Number>('https://localhost:7170/api/OrderHistory', )
-  // }
+  public addOrderHistory(orderHistory: OrderHistory): Observable<any> {
+    return this.http.post('https://localhost:7170/api/OrderHistory', orderHistory);
+  }
 }
