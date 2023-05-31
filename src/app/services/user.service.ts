@@ -36,8 +36,8 @@ export class UserService {
     return this.http.post<string>(`https://localhost:7170/api/User/register`, request);
   }
 
-  public getOrderHistory(){
-    return this.http.get<OrderHistory[]>('https://localhost:7170/api/OrderHistory');
+  public getOrderHistory(email : string){
+    return this.http.get<OrderHistory[]>(`https://localhost:7170/api/OrderHistory/${email}`);
   }
 
   public addOrderHistory(orderHistory: OrderHistory): Observable<any> {

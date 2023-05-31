@@ -42,6 +42,7 @@ export class AccountComponent {
       next: (user: User) => {
         this.user = user;
         console.log('User:', this.user);
+        this.getOrderDetails();
       },
       error: (error) => {
         console.log('Error:', error);
@@ -50,15 +51,16 @@ export class AccountComponent {
   }
 
   getOrderDetails() {
-    this.userService.getOrderHistory().subscribe({
-      next: (data: OrderHistory[]) => {
-        this.orderHistory = data;
-        this.fetchProducts();
-      },
-      error: (error) => {
-        console.error('Failed to retrieve order history:', error);
-      }
-    });
+    if (this.user?.email) {
+      this.userService.getOrderHistory(this.user.email).subscribe({
+        next: (data: OrderHistory[]) => {
+          this.orderHistory = data;
+        },
+        error: (error) => {
+          console.error('Failed to retrieve order history:', error);
+        }
+      });
+    }
   }
 
   fetchProducts() {
