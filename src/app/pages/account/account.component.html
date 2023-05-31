@@ -40,6 +40,7 @@
                     <tbody>
                     
                     <tr *ngFor="let order of orderHistory">
+                        <!-- we are assigning the result of productsMap.get to name -->
                         <td *ngIf="order.productId !== undefined">{{ productsMap.get(order.productId)?.name }}</td>
                         <td *ngIf="order.productId === undefined">N/A</td>
                         <td>{{order.total}}</td>

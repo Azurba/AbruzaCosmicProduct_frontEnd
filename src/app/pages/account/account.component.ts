@@ -28,7 +28,6 @@ export class AccountComponent {
     this.userService.getUserByEmail().subscribe({
       next: (user: User) => {
         this.user = user;
-        console.log('User:', this.user);
         this.getOrderDetails();
       },
       error: (error) => {
@@ -39,10 +38,11 @@ export class AccountComponent {
 
   getOrderDetails() {
     if (this.user?.email) {
+      //get all the order details of the user
       this.userService.getOrderHistory(this.user.email).subscribe({
         next: (data: OrderHistory[]) => {
           this.orderHistory = data;
-          this.fetchProducts(); // Call the method to fetch the products
+          this.fetchProducts(); // Call the method to fetch the product name
         },
         error: (error) => {
           console.error('Failed to retrieve order history:', error);
@@ -51,6 +51,7 @@ export class AccountComponent {
     }
   }
 
+  //this will get the id of the product and return the product object of that id by calling the searchProduct API controller
   fetchProducts() {
     const productIds = this.orderHistory.map(order => order.productId);
     productIds.forEach(productId => {
