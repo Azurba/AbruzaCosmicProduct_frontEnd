@@ -62,13 +62,17 @@ export class CheckoutComponent {
       if (this.checkoutForm.valid) {
         const allOrders = []; // Initialize the allOrders array
         for (let i = 0; i < this.cartItems.length; i++) {
-          this.updateOrderHistory(); // Update orderHistory for each iteration
-          this.orderHistory.product = this.cartItems[i].id;
+          //this.updateOrderHistory(); // Update orderHistory for each iteration
+          this.orderHistory.productId = this.cartItems[i].id;
+          this.orderHistory.total = this.cartItems[i].price;
           allOrders.push({ ...this.orderHistory }); // Add a copy of orderHistory to allOrders
         }
         
         for (let i = 0; i < allOrders.length; i++) {
-          this.userService.addOrderHistory(allOrders[i]); // Pass each order to userService
+          this.userService.addOrderHistory(allOrders[i]).subscribe(
+            (response) => {console.log("success")},
+            (error) => {console.log("error")}
+          )
           console.log(allOrders[i]);
         }
       }
@@ -86,13 +90,15 @@ export class CheckoutComponent {
     const cardNumber = this.checkoutForm.value.cardNumber.toString().slice(-4); // get 4 last digits
 
     this.orderHistory = {
+      email: this.userService._email,
       name: name,
-      phone: phone,
+      date: new Date(), 
       address: address,
+      phone: phone,
       city: city,
       state: state,
-      country: country,
       zipcode: zip,
+      country: country,
       cardNumber: cardNumber,
     }
   }
