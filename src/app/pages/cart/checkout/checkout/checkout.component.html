@@ -9,7 +9,7 @@
                 </svg>
             </div>
             <div class="col">
-                <form [formGroup]="checkoutForm" (ngSubmit)="onSubmitForm()">
+                <form [formGroup]="checkoutForm" (ngSubmit)="updateOrderHistory()">
                     <div class="coolinput">
                         <label for="fullname" class="text">Full Name:</label>
                         <input type="text" placeholder="" name="fullName" class="input" formControlName="fullName">
@@ -61,7 +61,7 @@
                   </svg>
             </div>
             <div class="col">
-                <form [formGroup]="checkoutForm" (ngSubmit)="onSubmitForm()">
+                <form [formGroup]="checkoutForm" (ngSubmit)="updateOrderHistory()">
                     <div class="coolinput">
                         <label for="cardnumber" class="text">Card Number</label>
                         <input type="text" placeholder="" name="cardnumber" class="input" formControlName="cardNumber">
@@ -79,7 +79,7 @@
                         <input type="text" placeholder="" name="securitycode" class="input" formControlName="securityCode">
                     </div>
                     <div class="text-center">
-                        <button (click)="redirectAcc()" type="button" class="btn btn-success" [disabled]="!checkoutForm.valid">Place your Order</button>
+                        <button (click)="onSubmitForm()" type="button" class="btn btn-success" [disabled]="!checkoutForm.valid">Place your Order</button>
                     </div>
                 </form>
             </div>

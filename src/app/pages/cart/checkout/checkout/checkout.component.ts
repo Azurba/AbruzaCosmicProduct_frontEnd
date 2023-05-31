@@ -17,6 +17,7 @@ export class CheckoutComponent {
   isModalOpen: boolean = false;
   checkoutForm!: FormGroup;
   orderHistory: OrderHistory = {};
+  allOrders : OrderHistory[] = [];
 
   constructor(private formBuilder: FormBuilder, cartService: CartService, private userService: UserService, private router: Router) {
     this.cartItems = cartService.getCartItems();
@@ -48,16 +49,6 @@ export class CheckoutComponent {
     this.router.navigateByUrl(link);
   }
 
-  redirectAcc() {
-    //this.openModal();
-    if(this.userService._email === undefined){
-      this.router.navigateByUrl('/login');
-    }else{
-      this.openModal();
-      console.log(this.orderHistory);
-    }
-  }
-
   openModal() {
     this.isModalOpen = true;
   }
@@ -69,14 +60,22 @@ export class CheckoutComponent {
   onSubmitForm() {
     if (this.checkoutForm != undefined) {
       if (this.checkoutForm.valid) {
-        this.updateOrderHistory();
-        console.log(this.orderHistory);
-        this.userService.addOrderHistory(this.orderHistory);
+        const allOrders = []; // Initialize the allOrders array
+        for (let i = 0; i < this.cartItems.length; i++) {
+          this.updateOrderHistory(); // Update orderHistory for each iteration
+          this.orderHistory.product = this.cartItems[i].id;
+          allOrders.push({ ...this.orderHistory }); // Add a copy of orderHistory to allOrders
+        }
+        
+        for (let i = 0; i < allOrders.length; i++) {
+          this.userService.addOrderHistory(allOrders[i]); // Pass each order to userService
+          console.log(allOrders[i]);
+        }
       }
     }
   }
 
-  private updateOrderHistory() {
+  updateOrderHistory() {
     const name = this.checkoutForm.value.fullName;
     const phone = this.checkoutForm.value.phone;
     const address = this.checkoutForm.value.address;
@@ -85,5 +84,16 @@ export class CheckoutComponent {
     const country = this.checkoutForm.value.country;
     const zip = this.checkoutForm.value.zip;
     const cardNumber = this.checkoutForm.value.cardNumber.toString().slice(-4); // get 4 last digits
+
+    this.orderHistory = {
+      name: name,
+      phone: phone,
+      address: address,
+      city: city,
+      state: state,
+      country: country,
+      zipcode: zip,
+      cardNumber: cardNumber,
+    }
   }
 }
