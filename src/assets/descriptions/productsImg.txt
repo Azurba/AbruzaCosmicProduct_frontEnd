@@ -1,114 +1,148 @@
-T-Shirts
+[
+  {
+    "id": 0,
+    "type": "tshirts",
+    "name": "Vintage Never Forget Pluto",
+    "quantity": 0,
+    "description": "100% Cotton, made in USA, machine wash safe",
+    "rating": 5,
+    "price": 19.99,
+    "image": "https://m.media-amazon.com/images/I/A13usaonutL._CLa%7C2140%2C2000%7C91CvXgUykuL.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_AC_UX679_.png"
+  },
+  {
+    "id": 0,
+    "type": "tshirts",
+    "name": "Astronaut Space Balloons",
+    "quantity": 0,
+    "description": "100% Cotton, made in USA, machine wash safe",
+    "rating": 4,
+    "price": 19.99,
+    "image": "https://m.media-amazon.com/images/I/A13usaonutL._CLa%7C2140%2C2000%7C91CT%2BvBmVTL.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_AC_UX679_.png"
+  },
+  {
+    "id": 0,
+    "type": "tshirts",
+    "name": "Back in My Days Planets",
+    "quantity": 0,
+    "description": "100% Cotton, made in USA, machine wash safe",
+    "rating": 4,
+    "price": 14.99,
+    "image": "https://m.media-amazon.com/images/I/91IM87eeuCL._CLa%7C2140%2C2000%7C71dNfXwLaqL.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_AC_UX679_.png"
+  },
+  {
+    "id": 0,
+    "type": "tshirts",
+    "name": "I need More Space",
+    "quantity": 0,
+    "description": "100% Cotton, made in USA, machine wash safe",
+    "rating": 5,
+    "price": 19.99,
+    "image": "https://m.media-amazon.com/images/I/A13usaonutL._CLa%7C2140%2C2000%7C71ocHFj5niL.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_AC_UX679_.png"
+  },
+  {
+    "id": 0,
+    "type": "tshirts",
+    "name": "Colorful Astronaut",
+    "quantity": 0,
+    "description": "100% Cotton, made in USA, machine wash safe",
+    "rating": 5,
+    "price": 23.99,
+    "image": "https://m.media-amazon.com/images/I/A13usaonutL._CLa%7C2140%2C2000%7C91QqTEz5lOL.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C214"
+},
 {
-  "id": 0,
-  "type": "tshirts",
-  "name": "Vintage Never Forget Pluto",
-  "quantity": 0,
-  "description": "100% Cotton, made in USA, machine wash safe",
-  "rating": 5,
-  "price": 19.99,
-  "image": "https://m.media-amazon.com/images/I/A13usaonutL._CLa%7C2140%2C2000%7C91CvXgUykuL.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_AC_UX679_.png"
-}
+    "id": 0,
+    "type": "tshirts",
+    "name": "Peaceful Astronaut",
+    "quantity": 0,
+    "description": "100% Cotton, made in USA, machine wash safe",
+    "rating": 5,
+    "price": 19.99,
+    "image": "https://m.media-amazon.com/images/I/A13usaonutL._CLa%7C2140%2C2000%7C91yXW36jmcL.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_AC_UX679_.png"
+  },
+  {
+    "id": 0,
+    "type": "tshirts",
+    "name": "Outerspace Astronaut",
+    "quantity": 0,
+    "description": "100% Cotton, made in USA, machine wash safe",
+    "rating": 5,
+    "price": 23.99,
+    "image": "https://m.media-amazon.com/images/I/A13usaonutL._CLa%7C2140%2C2000%7C91vWtMHQP0L.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_AC_UX679_.png"
+  },
+  {
+    "id": 0,
+    "type": "tshirts",
+    "name": "Solar System",
+    "quantity": 0,
+    "description": "100% Cotton, made in USA, machine wash safe",
+    "rating": 5,
+    "price": 19.99,
+    "image": "https://m.media-amazon.com/images/I/A13usaonutL._CLa%7C2140%2C2000%7C91dTE52L2uL.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_AC_UX679_.png"
+  },
+  {
+    "id": 0,
+    "type": "tshirts",
+    "name": "Solar System Simplified",
+    "quantity": 0,
+    "description": "100% Cotton, made in USA, machine wash safe",
+    "rating": 5,
+    "price": 15.99,
+    "image": "https://m.media-amazon.com/images/I/A13usaonutL._CLa%7C2140%2C2000%7C812hZMX2OhL.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_AC_UX679_.png"
+  },
 
-{
-  "id": 0,
-  "type": "tshirts",
-  "name": "Astronaut Space Balloons",
-  "quantity": 0,
-  "description": "100% Cotton, made in USA, machine wash safe",
-  "rating": 4,
-  "price": 19.99,
-  "image": "https://m.media-amazon.com/images/I/A13usaonutL._CLa%7C2140%2C2000%7C91CT%2BvBmVTL.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_AC_UX679_.png"
-}
 
-{
-  "id": 0,
-  "type": "tshirts",
-  "name": "Back in My Days Planets",
-  "quantity": 0,
-  "description": "100% Cotton, made in USA, machine wash safe",
-  "rating": 4,
-  "price": 14.99,
-  "image": "https://m.media-amazon.com/images/I/91IM87eeuCL._CLa%7C2140%2C2000%7C71dNfXwLaqL.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_AC_UX679_.png"
-}
+ {
+    "id": 0,
+    "type": "tshirts",
+    "name": "Peaceful Astronaut",
+    "quantity": 0,
+    "description": "100% Cotton, made in USA, machine wash safe",
+    "rating": 5,
+    "price": 17.99,
+    "image": "https://m.media-amazon.com/images/I/A13usaonutL._CLa%7C2140%2C2000%7C91yXW36jmcL.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_AC_UX679_.png"
+  },
 
-{
-  "id": 0,
-  "type": "tshirts",
-  "name": "I need More Space",
-  "quantity": 0,
-  "description": "100% Cotton, made in USA, machine wash safe",
-  "rating": 5,
-  "price": 19.99,
-  "image": "https://m.media-amazon.com/images/I/A13usaonutL._CLa%7C2140%2C2000%7C71ocHFj5niL.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_AC_UX679_.png"
-}
 
-{
-  "id": 0,
-  "type": "tshirts",
-  "name": "Colorful Astronaut",
-  "quantity": 0,
-  "description": "100% Cotton, made in USA, machine wash safe",
-  "rating": 5,
-  "price": 23.99,
-  "image": "https://m.media-amazon.com/images/I/A13usaonutL._CLa%7C2140%2C2000%7C91QqTEz5lOL.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_AC_UX679_.png"
-}
-
-{
-  "id": 0,
-  "type": "tshirts",
-  "name": "Peaceful Astronaut",
-  "quantity": 0,
-  "description": "100% Cotton, made in USA, machine wash safe",
-  "rating": 5,
-  "price": 19.99,
-  "image": "https://m.media-amazon.com/images/I/A13usaonutL._CLa%7C2140%2C2000%7C91yXW36jmcL.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_AC_UX679_.png"
-}
-
-{
-  "id": 0,
-  "type": "tshirts",
-  "name": "Outerspace Astronaut",
-  "quantity": 0,
-  "description": "100% Cotton, made in USA, machine wash safe",
-  "rating": 5,
-  "price": 23.99,
-  "image": "https://m.media-amazon.com/images/I/A13usaonutL._CLa%7C2140%2C2000%7C91vWtMHQP0L.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_AC_UX679_.png"
-}
-
-{
-  "id": 0,
-  "type": "tshirts",
-  "name": "Solar System",
-  "quantity": 0,
-  "description": "100% Cotton, made in USA, machine wash safe",
-  "rating": 5,
-  "price": 19.99,
-  "image": "https://m.media-amazon.com/images/I/A13usaonutL._CLa%7C2140%2C2000%7C91dTE52L2uL.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_AC_UX679_.png"
-}
-
-{
-  "id": 0,
-  "type": "tshirts",
-  "name": "Solar System Simplified",
-  "quantity": 0,
-  "description": "100% Cotton, made in USA, machine wash safe",
-  "rating": 5,
-  "price": 15.99,
-  "image": "https://m.media-amazon.com/images/I/A13usaonutL._CLa%7C2140%2C2000%7C812hZMX2OhL.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_AC_UX679_.png"
-}
-
-{
-  "id": 0,
-  "type": "tshirts",
-  "name": "Ballet Dancer Astronaut",
-  "quantity": 0,
-  "description": "100% Cotton, made in USA, machine wash safe",
-  "rating": 5,
-  "price": 18.99,
-  "image": "https://m.media-amazon.com/images/I/A13usaonutL._CLa%7C2140%2C2000%7C81XRnLCa6sL.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_AC_UX679_.png"
-}
-
+  {
+    "id": 0,
+    "type": "tshirts",
+    "name": "Outerspace Astronaut",
+    "quantity": 0,
+    "description": "100% Cotton, made in USA, machine wash safe",
+    "rating": 5,
+    "price": 23.99,
+    "image": "https://m.media-amazon.com/images/I/A13usaonutL._CLa%7C2140%2C2000%7C91vWtMHQP0L.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_AC_UX679_.png"
+  },
+  {
+    "id": 0,
+    "type": "tshirts",
+    "name": "Solar System",
+    "quantity": 0,
+    "description": "100% Cotton, made in USA, machine wash safe",
+    "rating": 5,
+    "price": 19.99,
+    "image": "https://m.media-amazon.com/images/I/A13usaonutL._CLa%7C2140%2C2000%7C91dTE52L2uL.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_AC_UX679_.png"
+  },
+  {
+    "id": 0,
+    "type": "tshirts",
+    "name": "Solar System Simplified",
+    "quantity": 0,
+    "description": "100% Cotton, made in USA, machine wash safe",
+    "rating": 5,
+    "price": 15.99,
+    "image": "https://m.media-amazon.com/images/I/A13usaonutL._CLa%7C2140%2C2000%7C812hZMX2OhL.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_AC_UX679_.png"
+  },
+  {
+    "id": 0,
+    "type": "tshirts",
+    "name": "Ballet Dancer Astronaut",
+    "quantity": 0,
+    "description": "100% Cotton, made in USA, machine wash safe",
+    "rating": 5,
+    "price": 18.99,
+    "image": "https://m.media-amazon.com/images/I/A13usaonutL._CLa%7C2140%2C2000%7C81XRnLCa6sL.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000"
+},
 {
   "id": 0,
   "type": "tshirts",
@@ -118,7 +152,7 @@ T-Shirts
   "rating": 5,
   "price": 17.99,
   "image": "https://m.media-amazon.com/images/I/A13usaonutL._CLa%7C2140%2C2000%7C91e4Tf9oG%2BL.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_AC_UX679_.png"
-}
+},
 
 {
   "id": 0,
@@ -129,7 +163,7 @@ T-Shirts
   "rating": 5,
   "price": 17.99,
   "image": "https://m.media-amazon.com/images/I/A13usaonutL._CLa%7C2140%2C2000%7C91DrohHGSEL.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_AC_UX679_.png"
-}
+},
 
 {
   "id": 0,
@@ -140,7 +174,7 @@ T-Shirts
   "rating": 5,
   "price": 23.99,
   "image": "https://m.media-amazon.com/images/I/A13usaonutL._CLa%7C2140%2C2000%7C91r4n4nJjxL.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_AC_UX679_.png"
-}
+},
 
 {
   "id": 0,
@@ -151,8 +185,7 @@ T-Shirts
   "rating": 5,
   "price": 23.99,
   "image": "https://m.media-amazon.com/images/I/A13usaonutL._CLa%7C2140%2C2000%7C91-W5mMGq8L.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_AC_UX679_.png"
-}
-
+},
 {
   "id": 0,
   "type": "tshirts",
@@ -162,7 +195,7 @@ T-Shirts
   "rating": 4,
   "price": 19.99,
   "image": "https://m.media-amazon.com/images/I/A13usaonutL._CLa%7C2140%2C2000%7C71ZRY8%2B5L7L.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_AC_UX679_.png"
-}
+},
 
 {
   "id": 0,
@@ -173,7 +206,7 @@ T-Shirts
   "rating": 4,
   "price": 23.99,
   "image": "https://m.media-amazon.com/images/I/A13usaonutL._CLa%7C2140%2C2000%7C61X5ECTHJvL.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_AC_UX679_.png"
-}
+},
 
 {
   "id": 0,
@@ -184,7 +217,7 @@ T-Shirts
   "rating": 5,
   "price": 23.99,
   "image": "https://m.media-amazon.com/images/I/A13usaonutL._CLa%7C2140%2C2000%7C719%2BoMmaavL.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_AC_UX679_.png"
-}
+},
 
 {
   "id": 0,
@@ -195,7 +228,7 @@ T-Shirts
   "rating": 5,
   "price": 19.99,
   "image": "https://m.media-amazon.com/images/I/A13usaonutL._CLa%7C2140%2C2000%7C91vElWXN17L.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_AC_UX679_.png"
-}
+},
 
 {
   "id": 0,
@@ -206,8 +239,7 @@ T-Shirts
   "rating": 5,
   "price": 24.99,
   "image": "https://m.media-amazon.com/images/I/A13usaonutL._CLa%7C2140%2C2000%7C718BZ6lQM6L.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_AC_UX679_.png"
-}
-
+},
 {
   "id": 0,
   "type": "tshirts",
@@ -217,7 +249,7 @@ T-Shirts
   "rating": 5,
   "price": 14.99,
   "image": "https://m.media-amazon.com/images/I/A13usaonutL._CLa%7C2140%2C2000%7C815G4v%2BuHtL.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_AC_UX679_.png"
-}
+},
 
 {
   "id": 0,
@@ -228,10 +260,7 @@ T-Shirts
   "rating": 5,
   "price": 24.99,
   "image": "https://m.media-amazon.com/images/I/A13usaonutL._CLa%7C2140%2C2000%7C91o2G8Y6g2L.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_AC_UX679_.png"
-}
-
-Poster
-
+},
 {
   "id": 0,
   "type": "poster",
@@ -241,7 +270,7 @@ Poster
   "rating": 5,
   "price": 13.99,
   "image": "https://solarsystem.nasa.gov/system/stellar_items/image_files/4_earth.jpg"
-}
+},
 
 {
   "id": 0,
@@ -252,7 +281,7 @@ Poster
   "rating": 5,
   "price": 13.99,
   "image": "https://solarsystem.nasa.gov/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBZ1lFIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--f677636e064bab318b520590eab8cb69903414dc/PIA03149.jpg"
-}
+},
 
 {
   "id": 0,
@@ -263,7 +292,7 @@ Poster
   "rating": 5,
   "price": 13.99,
   "image": "https://solarsystem.nasa.gov/system/stellar_items/image_files/6_mars.jpg"
-}
+},
 
 {
   "id": 0,
@@ -274,7 +303,7 @@ Poster
   "rating": 5,
   "price": 13.99,
   "image": "https://www.nasa.gov/sites/default/files/thumbnails/image/hubble_saturnspokes_stsci-01gph6dah7k11cg5pcvq4b9fq5.png"
-}
+},
 
 {
   "id": 0,
@@ -285,7 +314,7 @@ Poster
   "rating": 5,
   "price": 13.99,
   "image": "https://solarsystem.nasa.gov/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBalJWIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--34da91192ff836355ec6c8546ab71e955856964a/Full_Jupiter-800.jpg?disposition=inline"
-}
+},
 
 {
   "id": 0,
@@ -296,7 +325,7 @@ Poster
   "rating": 5,
   "price": 13.99,
   "image": "https://solarsystem.nasa.gov/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBb2hWIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--fad60db21d87add7772e08dca0ecf791ce07a531/uranus_carousel_1.jpg?disposition=inline"
-}
+},
 
 {
   "id": 0,
@@ -307,7 +336,7 @@ Poster
   "rating": 5,
   "price": 13.99,
   "image": "https://www.nasa.gov/sites/default/files/thumbnails/image/pia01492-main.jpg"
-}
+},
 
 {
   "id": 0,
@@ -318,7 +347,7 @@ Poster
   "rating": 5,
   "price": 13.99,
   "image": "https://www.nasa.gov/sites/default/files/thumbnails/image/imagesvenus20191211venus20191211-16.jpeg"
-}
+},
 
 {
   "id": 0,
@@ -332,8 +361,6 @@ Poster
 }
 
 
-Hat and Bennies
-
 {
   "id": 0,
   "type": "hat",
@@ -343,7 +370,7 @@ Hat and Bennies
   "rating": 5,
   "price": 9.99,
   "image": "https://m.media-amazon.com/images/I/717TM5fGDgL._AC_UX679_.jpg"
-}
+},
 
 {
   "id": 0,
@@ -354,7 +381,7 @@ Hat and Bennies
   "rating": 5,
   "price": 12.99,
   "image": "https://m.media-amazon.com/images/I/81QgjVjiwfL._AC_UX679_.jpg"
-}
+},
 
 {
   "id": 0,
@@ -365,7 +392,7 @@ Hat and Bennies
   "rating": 5,
   "price": 12.99,
   "image": "https://m.media-amazon.com/images/I/81jCjoja--L._AC_UX679_.jpg"
-}
+},
 
 {
   "id": 0,
@@ -376,7 +403,7 @@ Hat and Bennies
   "rating": 5,
   "price": 14.99,
   "image": "https://m.media-amazon.com/images/I/714VWO9bP3L._AC_UX679_.jpg"
-}
+},
 
 {
   "id": 0,
@@ -387,7 +414,7 @@ Hat and Bennies
   "rating": 5,
   "price": 10.99,
   "image": "https://m.media-amazon.com/images/I/61Qj1Nbcb6L._AC_UX679_.jpg"
-}
+},
 
 {
   "id": 0,
@@ -398,7 +425,7 @@ Hat and Bennies
   "rating": 5,
   "price": 10.99,
   "image": "https://m.media-amazon.com/images/I/71E+FC6Zx-L._AC_UX679_.jpg"
-}
+},
 
 
 {
@@ -410,7 +437,7 @@ Hat and Bennies
   "rating": 5,
   "price": 10.99,
   "image": "https://m.media-amazon.com/images/I/71ak5ztY2tL._AC_UX679_.jpg"
-}
+},
 
 {
   "id": 0,
@@ -421,7 +448,7 @@ Hat and Bennies
   "rating": 5,
   "price": 10.99,
   "image": "https://m.media-amazon.com/images/I/51Nm1EKAAqL._AC_UX679_.jpg"
-}
+},
 
 {
   "id": 0,
@@ -432,7 +459,7 @@ Hat and Bennies
   "rating": 5,
   "price": 10.99,
   "image": "https://m.media-amazon.com/images/I/81zADLUYZ5L._AC_UX679_.jpg"
-}
+},
 
 {
   "id": 0,
@@ -443,7 +470,7 @@ Hat and Bennies
   "rating": 5,
   "price": 10.99,
   "image": "https://m.media-amazon.com/images/I/61owjQSkL4L._AC_UX679_.jpg"
-}
+},
 
 {
   "id": 0,
@@ -454,7 +481,7 @@ Hat and Bennies
   "rating": 5,
   "price": 9.99,
   "image": "https://m.media-amazon.com/images/I/71BUj4hZKZL._AC_UX679_.jpg"
-}
+},
 
 {
   "id": 0,
@@ -465,7 +492,7 @@ Hat and Bennies
   "rating": 4,
   "price": 9.99,
   "image": "https://m.media-amazon.com/images/I/718vSMg2BEL._AC_UX679_.jpg"
-}
+},
 
 {
   "id": 0,
@@ -476,7 +503,7 @@ Hat and Bennies
   "rating": 5,
   "price": 9.99,
   "image": "https://m.media-amazon.com/images/I/61sOn14zjuL._AC_UX679_.jpg"
-}
+},
 
 {
   "id": 0,
@@ -487,7 +514,7 @@ Hat and Bennies
   "rating": 4,
   "price": 9.99,
   "image": "https://m.media-amazon.com/images/I/817jYAK70dL._AC_UX679_.jpg"
-}
+},
 
 {
   "id": 0,
@@ -500,9 +527,6 @@ Hat and Bennies
   "image": "https://m.media-amazon.com/images/I/71lYgseAFrL._AC_UX679_.jpg"
 }
 
-
-Space Suit
-
 {
   "id": 0,
   "type": "spaceSuit",
@@ -512,9 +536,9 @@ Space Suit
   "rating": 0,
   "price": 65000,
   "image": "https://ids.si.edu/ids/deliveryService?id=NASM-A19730040000-NASM2018-02096&max=900"
-}
+},
 
-Telescope
+
 
 {
   "id": 0,
@@ -525,7 +549,7 @@ Telescope
   "rating": 0,
   "price": 129.99,
   "image": "https://m.media-amazon.com/images/I/71k61KBLufL._AC_SX679_.jpg"
-}
+},
 
 {
   "id": 0,
@@ -536,18 +560,18 @@ Telescope
   "rating": 0,
   "price": 1099,
   "image": "https://cdn.shopify.com/s/files/1/1935/4371/products/050234110686_NexStar_6SE_11068_1_570x380@2x.jpg?v=1529944202"
-}
+},
 
 {
   "id": 0,
   "type": "telescope",
-  "name": "10" Flextube 250P Collapsible Dobsonian",
+  "name": "10 Flextube 250P Collapsible Dobsonian",
   "quantity": 0,
   "description": "10″ (254 mm) Dobsonian-style Newtonian. 200 mm focal length (f/4.7). ",
   "rating": 0,
   "price": 10099,
   "image": "https://cdn.shopify.com/s/files/1/1935/4371/products/050234110686_NexStar_6SE_11068_1_570x380@2x.jpg?v=1529944202"
-}
+},
 
 {
   "id": 0,
@@ -559,9 +583,6 @@ Telescope
   "price": 10099,
   "image": "https://cdn.shopify.com/s/files/1/1979/5379/products/Flextube250_Main_1800x1800_6e80e281-9a62-4102-b9a6-f4e01eec3dc4_480x480.jpg?v=1632854772"
 }
-
-Books
-
 {
   "id": 0,
   "type": "book",
@@ -571,7 +592,7 @@ Books
   "rating": 4,
   "price": 17.30,
   "image": "https://m.media-amazon.com/images/I/616zfYX3M9L._SX382_BO1,204,203,200_.jpg"
-}
+},
 
 {
   "id": 0,
@@ -582,8 +603,7 @@ Books
   "rating": 4,
   "price": 9.48,
   "image": "https://m.media-amazon.com/images/I/61j+AB3GUoL.jpg"
-}
-
+},
 {
   "id": 0,
   "type": "book",
@@ -593,35 +613,28 @@ Books
   "rating": 5,
   "price": 19.08,
   "image": "https://m.media-amazon.com/images/I/512EkN83rtL.jpg"
-}
+},
 
 {
   "id": 0,
   "type": "book",
   "name": "Death by Black Hole: And Other Cosmic Quandaries",
   "quantity": 0,
-  "description": "Loyal readers of the monthly "Universe" essays in Natural History magazine have long recognized Neil deGrasse Tyson's talent for guiding them through the mysteries of the cosmos with clarity and enthusiasm. Bringing together more than forty of Tyson's favorite essays, Death by Black Hole explores a myriad of cosmic topics, from what it would be like to be inside a black hole to the movie industry's feeble efforts to get its night skies right. One of America's best-known astrophysicists, Tyson is a natural teacher who simplifies the complexities of astrophysics while sharing his infectious fascination for our universe.",
+  "description": "Loyal readers of the monthly Universe essays in Natural History magazine have long recognized Neil deGrasse Tyson's talent for guiding them through the mysteries of the cosmos with clarity and enthusiasm. Bringing together more than forty of Tyson's favorite essays, Death by Black Hole explores a myriad of cosmic topics, from what it would be like to be inside a black hole to the movie industry's feeble efforts to get its night skies right. One of America's best-known astrophysicists, Tyson is a natural teacher who simplifies the complexities of astrophysics while sharing his infectious fascination for our universe.",
   "rating": 5,
   "price": 13.95,
   "image": "https://m.media-amazon.com/images/I/51KzoVE+GJL._SY344_BO1,204,203,200_.jpg"
-}
+},
 
 {
   "id": 0,
   "type": "book",
   "name": "Death by Black Hole: And Other Cosmic Quandaries",
   "quantity": 0,
-  "description": "Loyal readers of the monthly "Universe" essays in Natural History magazine have long recognized Neil deGrasse Tyson's talent for guiding them through the mysteries of the cosmos with clarity and enthusiasm. Bringing together more than forty of Tyson's favorite essays, Death by Black Hole explores a myriad of cosmic topics, from what it would be like to be inside a black hole to the movie industry's feeble efforts to get its night skies right. One of America's best-known astrophysicists, Tyson is a natural teacher who simplifies the complexities of astrophysics while sharing his infectious fascination for our universe.",
+  "description": "Loyal readers of the monthly Universe essays in Natural History magazine have long recognized Neil deGrasse Tyson's talent for guiding them through the mysteries of the cosmos with clarity and enthusiasm. Bringing together more than forty of Tyson's favorite essays, Death by Black Hole explores a myriad of cosmic topics, from what it would be like to be inside a black hole to the movie industry's feeble efforts to get its night skies right. One of America's best-known astrophysicists, Tyson is a natural teacher who simplifies the complexities of astrophysics while sharing his infectious fascination for our universe.",
   "rating": 5,
   "price": 13.95,
-  "image": "
-https://m.media-amazon.com/images/I/615uLHWGWLL.jpg"
+  "image": "https://m.media-amazon.com/images/I/615uLHWGWLL.jpg"
 }
+]
 
-https://cdn.shopify.com/s/files/1/1979/5379/products/9781554071470-us_480x480.jpg?v=1541462724
-https://cdn.shopify.com/s/files/1/1979/5379/products/screen-shot-2021-07-05-at-11.12.47-am_480x480.png?v=1635186775
-https://cdn.shopify.com/s/files/1/1979/5379/products/LPNS40Ret_480x480.jpg?v=1561642621
-https://cdn.shopify.com/s/files/1/1979/5379/products/51uL3JStcIL._SX322_BO1_204_203_200_480x480.jpg?v=1631919896
-https://cdn.shopify.com/s/files/1/1979/5379/products/51Qo9npve9L_480x480.jpg?v=1553793819
-https://cdn.shopify.com/s/files/1/1979/5379/products/61hYqNLtjYL._SX368_BO1_204_203_200_480x480.jpg?v=1542676360
-https://cdn.shopify.com/s/files/1/1979/5379/products/SpaceMan_Cover_480x480.jpg?v=1517864294
