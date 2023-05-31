@@ -18,6 +18,7 @@ export class CheckoutComponent {
   checkoutForm!: FormGroup;
   orderHistory: OrderHistory = {};
   allOrders : OrderHistory[] = [];
+  isErrorModalOpen: boolean = false;
 
   constructor(private formBuilder: FormBuilder, cartService: CartService, private userService: UserService, private router: Router) {
     this.cartItems = cartService.getCartItems();
@@ -57,23 +58,38 @@ export class CheckoutComponent {
     this.isModalOpen = false;
   }
 
+  openErrorModal(){
+    this.isErrorModalOpen = true;
+  }
+
+  closeErrorModal(){
+    this.isErrorModalOpen = false;
+  }
+
   onSubmitForm() {
-    if (this.checkoutForm != undefined) {
-      if (this.checkoutForm.valid) {
-        const allOrders = []; // Initialize the allOrders array
-        for (let i = 0; i < this.cartItems.length; i++) {
-          //this.updateOrderHistory(); // Update orderHistory for each iteration
-          this.orderHistory.productId = this.cartItems[i].id;
-          this.orderHistory.total = this.cartItems[i].price;
-          allOrders.push({ ...this.orderHistory }); // Add a copy of orderHistory to allOrders
-        }
-        
-        for (let i = 0; i < allOrders.length; i++) {
-          this.userService.addOrderHistory(allOrders[i]).subscribe(
-            (response) => {console.log("success")},
-            (error) => {console.log("error")}
-          )
-          console.log(allOrders[i]);
+    if(this.userService._email === undefined){
+      this.router.navigateByUrl('/login');
+    }else{
+      if (this.checkoutForm != undefined) {
+        if (this.checkoutForm.valid) {
+          const allOrders = []; 
+          for (let i = 0; i < this.cartItems.length; i++) {
+            this.orderHistory.productId = this.cartItems[i].id;
+            this.orderHistory.total = this.cartItems[i].price;
+            allOrders.push({ ...this.orderHistory }); 
+          }
+          
+          for (let i = 0; i < allOrders.length; i++) {
+            this.userService.addOrderHistory(allOrders[i]).subscribe({
+              next: (response: string) => {
+                this.openModal();
+              },
+              error: (error: any) => {
+                this.openErrorModal();
+              }
+            });
+            //console.log(allOrders[i]);
+          }
         }
       }
     }

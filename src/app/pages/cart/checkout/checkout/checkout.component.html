@@ -120,7 +120,7 @@
     </div>
 </div>
 
-
+<!-- success modal -->
 <div class="modal-backdrop" *ngIf="isModalOpen">
     <div class="modal" tabindex="-1" role="dialog" [ngClass]="{'show': isModalOpen}" style="display: block;">
       <div class="modal-dialog modal-lg">
@@ -132,6 +132,23 @@
           </div>
           <div class="modal-body" style="background-image: url('assets/img/dab2.JPG'); background-repeat: no-repeat; background-size: cover;  height: 800px; width: 100%;">
             <h1 style="font-size: 27px; color: black; font-weight: bolder;">An e-mail with the details of the purchase has been sent to you!</h1>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- error modal -->
+<div class="modal-backdrop" *ngIf="isErrorModalOpen">
+    <div class="modal" tabindex="-1" role="dialog" [ngClass]="{'show': isErrorModalOpen}" style="display: block;">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button (click)="redirect('/home')" type="button" class="btn btn-success">Home</button>
+            <h1 style="font-size: 30px; padding-left: 30px;">Oops! Something went wrong while processing your order!</h1>
+            <button (click)="redirect('/account')" type="button" class="btn btn-success">Account</button>
+          </div>
+          <div class="modal-body" style="background-image: url('assets/img/sadAstronaut.jpg'); background-repeat: no-repeat; background-size: cover;  height: 800px; width: 100%;">
+            <h1 style="font-size: 27px; color: black; font-weight: bolder;">Please try again later or call (970) 123-456</h1>
         </div>
         </div>
       </div>
