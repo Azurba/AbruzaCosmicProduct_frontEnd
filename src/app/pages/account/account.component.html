@@ -38,10 +38,12 @@
                     </tr>
                     </thead>
                     <tbody>
+                    
                     <tr *ngFor="let order of orderHistory">
-                        <td>{{order.productId}}</td>
+                        <td *ngIf="order.productId !== undefined">{{ productsMap.get(order.productId)?.name }}</td>
+                        <td *ngIf="order.productId === undefined">N/A</td>
                         <td>{{order.total}}</td>
-                        <td>{{order.date}}</td>
+                        <td>{{order.date | date:'yyyy-MM-dd'}}</td>
                         <td>{{order.address}} - {{order.city}}, {{order.state}}, {{order.country}}</td>
                         <td>{{order.cardNumber}}</td>
                     </tr>
