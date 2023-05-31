@@ -14,29 +14,16 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class AccountComponent {
   
-  user? : User;
-  orderHistory : OrderHistory[] = [];
-  product: Product | undefined;
+  user?: User;
+  orderHistory: OrderHistory[] = [];
   productsMap: Map<number, Product> = new Map<number, Product>();
 
-  constructor(private userService : UserService, private route : Router, private productService : ProductsService){
-  }
+  constructor(private userService: UserService, private route: Router, private productService: ProductsService) { }
 
   ngOnInit(): void {
     this.getUserDetails();
-    this.getOrderDetails();
-    this.productService.searchProduct(1074).subscribe(
-      (product: Product) => {
-        this.product = product;
-        console.log('Product:', this.product);
-      },
-      (error) => {
-        console.error('Error retrieving product:', error);
-      }
-    );
   }
   
-
   getUserDetails() {
     this.userService.getUserByEmail().subscribe({
       next: (user: User) => {
@@ -55,6 +42,7 @@ export class AccountComponent {
       this.userService.getOrderHistory(this.user.email).subscribe({
         next: (data: OrderHistory[]) => {
           this.orderHistory = data;
+          this.fetchProducts(); // Call the method to fetch the products
         },
         error: (error) => {
           console.error('Failed to retrieve order history:', error);
@@ -66,7 +54,7 @@ export class AccountComponent {
   fetchProducts() {
     const productIds = this.orderHistory.map(order => order.productId);
     productIds.forEach(productId => {
-      if(productId != undefined){
+      if (productId !== undefined) {
         this.productService.searchProduct(productId).subscribe({
           next: (product: Product) => {
             this.productsMap.set(productId, product);
@@ -84,5 +72,4 @@ export class AccountComponent {
       this.route.navigate([this.route.url]);
     });
   }  
-
 }
