@@ -1,3 +1,6 @@
+# About
+
+This is a fully working fictitious web store that sells universe themed products like t-shirts, hats, posters and much more. It is divided into two modules, ASP.NET API Backend which is responsible for managing all the API and database connections and the Angular Frontend module that uses API calls to get all the information about products, user account and order histories and display it to the user. This app uses JWT tokens to handle authentication and authorization of users, which includes account registration and login. In addition, it uses Route Guards in order to define which routes are available, depending if the user is logging in or not
 
 # Video
 
@@ -46,6 +49,15 @@
 ### Order History tab
 
 ![account2](https://github.com/Azurba/AbruzaCosmicProduct_frontEnd/assets/58566178/2355056d-ca2f-4972-86d3-79a5f773ab99)
+
+## Backend API and Swagger
+
+![swagger](https://github.com/Azurba/AbruzaCosmicProduct_frontEnd/assets/58566178/3d5a01e5-8fb0-4607-b93b-8197f751606f)
+
+## Backend JWT Tokens and SQL Server
+
+![sql](https://github.com/Azurba/AbruzaCosmicProduct_frontEnd/assets/58566178/960fdfd4-b95a-452c-be0c-e8716edd1fde)
+
 
 
 
