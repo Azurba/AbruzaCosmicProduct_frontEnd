@@ -30,6 +30,7 @@
                 <table class="table table-striped">
                     <thead>
                     <tr>
+                        <th scope="col">Order ID</th>
                         <th scope="col">Product ID
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-zoom-in" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"/>
@@ -49,8 +50,13 @@
                     <tr *ngFor="let order of orderHistory">
                         <!-- we are assigning the result of productsMap.get to name -->
                         <td><a (click)="openModal()" style="text-decoration: underline; color: blue;">{{order.id}}</a></td>
-                        <!-- <td *ngIf="order.productId !== undefined">{{ productsMap.get(order.productId)?.name }}</td>
-                        <td *ngIf="order.productId === undefined">N/A</td> -->
+                        <td *ngIf="order.products !== undefined">
+                            <ng-container *ngFor="let product of order.products; let last = last">
+                              {{ product.id }}{{ !last ? ',' : '' }}
+                            </ng-container>
+                          </td>
+                          
+                        <td *ngIf="order.productId === undefined">N/A</td>
                         <td>{{order.total}}</td>
                         <td>{{order.date | date:'yyyy-MM-dd'}}</td>
                         <td>{{order.address}} - {{order.city}}, {{order.state}}, {{order.country}}</td>

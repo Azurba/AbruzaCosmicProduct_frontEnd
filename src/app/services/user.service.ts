@@ -43,4 +43,5 @@ export class UserService {
   public addOrderHistory(orderHistory: OrderHistory): Observable<any> {
     return this.http.post('https://localhost:7170/api/OrderHistory', orderHistory);
   }
+
 }

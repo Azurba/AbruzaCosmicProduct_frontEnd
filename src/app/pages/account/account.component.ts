@@ -23,6 +23,7 @@ export class AccountComponent {
 
   ngOnInit(): void {
     this.getUserDetails();
+    console.log('Order:', this.orderHistory);
   }
   
   getUserDetails() {
@@ -54,19 +55,22 @@ export class AccountComponent {
 
   //this will get the id of the product and return the product object of that id by calling the searchProduct API controller
   fetchProducts() {
-    const productIds = this.orderHistory.map(order => order.productId);
-    productIds.forEach(productId => {
-      if (productId !== undefined) {
-        this.productService.searchProduct(productId).subscribe({
-          next: (product: Product) => {
-            this.productsMap.set(productId, product);
-          },
-          error: (error) => {
-            console.error(`Failed to retrieve product with ID ${productId}:`, error);
-          }
-        });
-      }
-    });
+    
+
+    // const productIds = this.orderHistory.map(order => order.productId);
+    // productIds.forEach(productId => {
+    //   if (productId !== undefined) {
+    //     this.productService.searchProduct(productId).subscribe({
+    //       next: (product: Product) => {
+    //         this.productsMap.set(productId, product);
+            
+    //       },
+    //       error: (error) => {
+    //         console.error(`Failed to retrieve product with ID ${productId}:`, error);
+    //       }
+    //     });
+    //   }
+    // });
   }
 
   logout(){

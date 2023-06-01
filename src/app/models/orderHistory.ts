@@ -14,4 +14,5 @@ export class OrderHistory{
     country? : string;
     cardNumber? : number;
     productId? : number;
+    products? : Product[] = [];
 }

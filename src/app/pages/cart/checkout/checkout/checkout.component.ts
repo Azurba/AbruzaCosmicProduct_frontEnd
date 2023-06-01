@@ -67,31 +67,46 @@ export class CheckoutComponent {
   }
 
   onSubmitForm() {
+    console.log(this.orderHistory)
     if(this.userService._email === undefined){
       this.router.navigateByUrl('/login');
     }else{
+      
       if (this.checkoutForm != undefined) {
         if (this.checkoutForm.valid) {
-          const allOrders = []; 
-          for (let i = 0; i < this.cartItems.length; i++) {
-            this.orderHistory.productId = this.cartItems[i].id;
-            this.orderHistory.total = this.cartItems[i].price;
-            allOrders.push({ ...this.orderHistory }); 
-          }
-          
-          for (let i = 0; i < allOrders.length; i++) {
-            this.userService.addOrderHistory(allOrders[i]).subscribe({
-              next: (response: string) => {
-                this.openModal();
-              },
-              error: (error: any) => {
-                this.openErrorModal();
-              }
-            });
-            //console.log(allOrders[i]);
-          }
+          this.userService.addOrderHistory(this.orderHistory).subscribe({
+            next: (response: string) => {
+              this.openModal();
+            },
+            error: (error: any) => {
+              this.openErrorModal();
+            }
+          });
         }
       }
+      
+      // if (this.checkoutForm != undefined) {
+      //   if (this.checkoutForm.valid) {
+      //     const allOrders = []; 
+      //     for (let i = 0; i < this.cartItems.length; i++) {
+      //       this.orderHistory.productId = this.cartItems[i].id;
+      //       this.orderHistory.total = this.cartItems[i].price;
+      //       allOrders.push({ ...this.orderHistory }); 
+      //     }
+          
+      //     for (let i = 0; i < allOrders.length; i++) {
+      //       this.userService.addOrderHistory(allOrders[i]).subscribe({
+      //         next: (response: string) => {
+      //           this.openModal();
+      //         },
+      //         error: (error: any) => {
+      //           this.openErrorModal();
+      //         }
+      //       });
+      //       //console.log(allOrders[i]);
+      //     }
+      //   }
+      // }
     }
   }
 
@@ -103,12 +118,12 @@ export class CheckoutComponent {
     const state = this.checkoutForm.value.state;
     const country = this.checkoutForm.value.country;
     const zip = this.checkoutForm.value.zip;
-    const cardNumber = this.checkoutForm.value.cardNumber.toString().slice(-4); // get 4 last digits
+    const cardNumber = parseInt(this.checkoutForm.value.cardNumber.toString().slice(-4));
+
 
     this.orderHistory = {
       email: this.userService._email,
       name: name,
-      date: new Date(), 
       address: address,
       phone: phone,
       city: city,
@@ -116,6 +131,9 @@ export class CheckoutComponent {
       zipcode: zip,
       country: country,
       cardNumber: cardNumber,
+      total: this.cartTotal,
+      products: this.cartItems
     }
+    
   }
 }
