@@ -1,27 +1,52 @@
-# AbruzaCosmicProductFrontEnd
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.2.
+# Video
 
-## Development server
+# Pictures
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Home
 
-## Code scaffolding
+![Home1](https://github.com/Azurba/AbruzaCosmicProduct_frontEnd/assets/58566178/e0ba84c3-7a55-447b-a27b-2292f147fd26)
+![home2](https://github.com/Azurba/AbruzaCosmicProduct_frontEnd/assets/58566178/af389f6a-7981-4147-943f-427d9123f2bd)
+![home3](https://github.com/Azurba/AbruzaCosmicProduct_frontEnd/assets/58566178/a5c61144-0bfd-4985-a1fe-47984a654a99)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Products
 
-## Build
+### T-Shirts
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+![tshirts](https://github.com/Azurba/AbruzaCosmicProduct_frontEnd/assets/58566178/9985fcc7-f73f-40d6-ac38-5af2cc886fcb)
 
-## Running unit tests
+### Hats and Bennies
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+![hats](https://github.com/Azurba/AbruzaCosmicProduct_frontEnd/assets/58566178/d71e89b3-16af-4a5c-9e87-59690d9c22a6)
 
-## Running end-to-end tests
+## Cart
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+![cart1](https://github.com/Azurba/AbruzaCosmicProduct_frontEnd/assets/58566178/0e3f262b-a8b6-42c2-9e9b-ee7ea88637d0)
 
-## Further help
+### Items currently in Cart indicator
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+![cart2](https://github.com/Azurba/AbruzaCosmicProduct_frontEnd/assets/58566178/10a78998-51bb-4fbc-8d04-b560a7cd730b)
+
+## Checkout
+
+![checkout](https://github.com/Azurba/AbruzaCosmicProduct_frontEnd/assets/58566178/01446d58-d016-4df4-977b-40949df916f2)
+
+![checkout2](https://github.com/Azurba/AbruzaCosmicProduct_frontEnd/assets/58566178/d4348a36-1d7f-4c2d-844a-6b6cdb264c49)
+
+## Login
+
+![login1](https://github.com/Azurba/AbruzaCosmicProduct_frontEnd/assets/58566178/d7282b51-d229-4a4e-9907-f8cbe2813a48)
+
+## Account and Order History
+
+### Account information tab
+
+![account](https://github.com/Azurba/AbruzaCosmicProduct_frontEnd/assets/58566178/0564d915-b26c-4415-9afd-5d218f3a4828)
+
+### Order History tab
+
+![account2](https://github.com/Azurba/AbruzaCosmicProduct_frontEnd/assets/58566178/2355056d-ca2f-4972-86d3-79a5f773ab99)
+
+
+
+
