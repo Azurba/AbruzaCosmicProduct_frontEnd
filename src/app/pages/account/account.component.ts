@@ -17,6 +17,7 @@ export class AccountComponent {
   user?: User;
   orderHistory: OrderHistory[] = [];
   productsMap: Map<number, Product> = new Map<number, Product>();
+  isModalOpen : boolean = false;
 
   constructor(private userService: UserService, private route: Router, private productService: ProductsService) { }
 
@@ -72,5 +73,14 @@ export class AccountComponent {
     this.route.navigateByUrl('/', { skipLocationChange: true }).then(() => {
       this.route.navigate([this.route.url]);
     });
-  }  
+  }
+  
+  openModal(){
+    this.isModalOpen = true;
+  }
+
+  closeModal(){
+    this.isModalOpen = false;
+  }
+
 }
