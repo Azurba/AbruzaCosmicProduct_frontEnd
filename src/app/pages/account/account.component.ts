@@ -18,6 +18,7 @@ export class AccountComponent {
   orderHistory: OrderHistory[] = [];
   productsMap: Map<number, Product> = new Map<number, Product>();
   isModalOpen : boolean = false;
+  selectedProduct? : Product;
 
   constructor(private userService: UserService, private route: Router, private productService: ProductsService) { }
 
@@ -44,7 +45,6 @@ export class AccountComponent {
       this.userService.getOrderHistory(this.user.email).subscribe({
         next: (data: OrderHistory[]) => {
           this.orderHistory = data;
-          this.fetchProducts(); // Call the method to fetch the product name
         },
         error: (error) => {
           console.error('Failed to retrieve order history:', error);
@@ -54,8 +54,17 @@ export class AccountComponent {
   }
 
   //this will get the id of the product and return the product object of that id by calling the searchProduct API controller
-  fetchProducts() {
-    
+  fetchProducts(productId : number) {
+    if (productId !== undefined) {
+      this.productService.searchProduct(productId).subscribe({
+        next: (product: Product) => {
+          this.openModal(product);
+        },
+        error: (error) => {
+          console.error(`Failed to retrieve product with ID ${productId}:`, error);
+        }
+      });
+    }
 
     // const productIds = this.orderHistory.map(order => order.productId);
     // productIds.forEach(productId => {
@@ -79,7 +88,8 @@ export class AccountComponent {
     });
   }
   
-  openModal(){
+  openModal(product : Product){
+    this.selectedProduct = product;
     this.isModalOpen = true;
   }
 

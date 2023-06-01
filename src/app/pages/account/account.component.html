@@ -49,25 +49,23 @@
                     
                     <tr *ngFor="let order of orderHistory">
                         <!-- we are assigning the result of productsMap.get to name -->
-                        <td><a (click)="openModal()" style="text-decoration: underline; color: blue;">{{order.id}}</a></td>
+                        <td>{{order.id}}</td>
                         <td *ngIf="order.products !== undefined">
                             <ng-container *ngFor="let product of order.products; let last = last">
-                              {{ product.id }}{{ !last ? ',' : '' }}
+                                <a *ngIf="product.id !== undefined" (click)="fetchProducts(product.id)" style="text-decoration: underline; color: blue;">{{ product.id }}</a>{{ !last ? ',' : '' }}
                             </ng-container>
                           </td>
-                          
-                        <td *ngIf="order.productId === undefined">N/A</td>
                         <td>{{order.total}}</td>
                         <td>{{order.date | date:'yyyy-MM-dd'}}</td>
                         <td>{{order.address}} - {{order.city}}, {{order.state}}, {{order.country}}</td>
                         <td>{{order.cardNumber}}</td>
-                        <td>
-                            <div>
-                                <button type="button" class="btn btn-info" style="margin-right: 20px;">Track package</button>
-                                <button type="button" class="btn btn-danger" style="margin-right: 20px;">Cancel and Returns</button>
-                                <button type="button" class="btn btn-success">Write a review</button>
+                        <td style="justify-content: center; align-items: center; text-align: center;">
+                            <div class="row d-flex justify-content-center">
+                              <button type="button" class="btn btn-info" style="margin-bottom: 20px; margin-right: 20px; width: 200px">Track package</button>
+                              <button type="button" class="btn btn-danger" style="margin-bottom: 20px;margin-right: 20px; width: 200px">Cancel and Returns</button>
+                              <button type="button" class="btn btn-success" style="width: 200px">Write a review</button>
                             </div>
-                        </td>
+                        </td>                          
                     </tr>
                     </tbody>
                 </table>
@@ -85,7 +83,7 @@
             <button type="button" class="btn btn-danger" (click)="closeModal()">Close</button>
           </div>
           <div class="modal-body">
-            <app-modal-card></app-modal-card>
+            <app-modal-card  [orderHistory]="orderHistory" [selectedProduct]="selectedProduct"></app-modal-card>
           </div>
         </div>
       </div>
