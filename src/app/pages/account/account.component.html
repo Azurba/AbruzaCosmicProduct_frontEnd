@@ -1,8 +1,8 @@
-<mat-tab-group animationDuration="2000ms">
+<mat-tab-group animationDuration="2000ms" style="margin-top: 30px; margin-bottom: 30px;">
     <mat-tab label="Account Details">
-        <div class="container">
+        <div class="container" style="margin-bottom: 50px; margin-top: 50px;">
             <div class="row justify-content-center">
-                <h1>Hello Joao</h1>
+                <!-- <h1>Hello Joao</h1> -->
                 <table class="table table-striped">
                     <thead>
                     <tr>
@@ -41,6 +41,7 @@
                         <th scope="col">Date</th>
                         <th scope="col">Shipped To</th>
                         <th scope="col">Payment Method (Last 4 digits)</th>
+                        <th scope="col">Actions</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -54,6 +55,13 @@
                         <td>{{order.date | date:'yyyy-MM-dd'}}</td>
                         <td>{{order.address}} - {{order.city}}, {{order.state}}, {{order.country}}</td>
                         <td>{{order.cardNumber}}</td>
+                        <td>
+                            <div>
+                                <button type="button" class="btn btn-info" style="margin-right: 20px;">Track package</button>
+                                <button type="button" class="btn btn-danger" style="margin-right: 20px;">Cancel and Returns</button>
+                                <button type="button" class="btn btn-success">Write a review</button>
+                            </div>
+                        </td>
                     </tr>
                     </tbody>
                 </table>
@@ -71,7 +79,7 @@
             <button type="button" class="btn btn-danger" (click)="closeModal()">Close</button>
           </div>
           <div class="modal-body">
-            <!-- <app-product-card></app-product-card> -->
+            <app-modal-card></app-modal-card>
           </div>
         </div>
       </div>

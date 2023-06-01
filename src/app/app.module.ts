@@ -34,6 +34,7 @@ import { User } from './models/user';
 import { UserService } from './services/user.service';
 import { ReactiveFormsModule } from '@angular/forms';
 import {MatChipsModule} from '@angular/material/chips';
+import { ModalCardComponent } from './pages/account/modal-card/modal-card.component';
 
 
 @NgModule({
@@ -54,7 +55,8 @@ import {MatChipsModule} from '@angular/material/chips';
     LoginComponent,
     FooterComponent,
     AboutComponent,
-    AccountComponent
+    AccountComponent,
+    ModalCardComponent
   ],
   imports: [
     BrowserModule,
