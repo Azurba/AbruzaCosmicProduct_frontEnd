@@ -24,9 +24,12 @@ https://youtu.be/ZKc0voNYlcs
 
 ## Home
 
-[![Home1](https://github.com/Azurba/AbruzaCosmicProduct_frontEnd/assets/58566178/e0ba84c3-7a55-447b-a27b-2292f147fd26)](https://github.com/Azurba/AbruzaCosmicProduct_frontEnd/blob/master/readMePics/Home1.JPG)
-![home2](https://github.com/Azurba/AbruzaCosmicProduct_frontEnd/assets/58566178/af389f6a-7981-4147-943f-427d9123f2bd)
-![home3](https://github.com/Azurba/AbruzaCosmicProduct_frontEnd/assets/58566178/a5c61144-0bfd-4985-a1fe-47984a654a99)
+![Home1](https://github.com/Azurba/AbruzaCosmicProduct_frontEnd/assets/58566178/5bd55048-e92b-4e80-b1dd-fe6dc3a52eca)
+
+![home2](https://github.com/Azurba/AbruzaCosmicProduct_frontEnd/assets/58566178/77da221f-739b-4304-ac4d-da02273c1a04)
+
+![home3](https://github.com/Azurba/AbruzaCosmicProduct_frontEnd/assets/58566178/74c7bcf9-ef51-476d-846e-124479ad9957)
+
 
 ## Products
 
