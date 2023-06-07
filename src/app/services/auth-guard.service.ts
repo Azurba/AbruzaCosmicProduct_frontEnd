@@ -14,14 +14,14 @@ export class AuthGuardService {
 
   login(){
     this.isUserLoggedIn = true;
-    console.log(this.isUserLoggedIn);
     this.router.navigateByUrl('/account')
     this._snackBar.open('You are now logged in. Welcome!', 'Close', { duration: 3000, horizontalPosition: 'center', verticalPosition: 'bottom' });
   }
 
   logout(){
     this.isUserLoggedIn = false;
-    console.log(this.isUserLoggedIn);
+    location.reload();
+    //this._snackBar.open('Logged out successfully. Bye!', 'Close', { duration: 3000, horizontalPosition: 'center', verticalPosition: 'bottom' });
   }
 
   isAuthenticated() : boolean {

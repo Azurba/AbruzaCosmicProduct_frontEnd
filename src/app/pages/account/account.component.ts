@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { OrderHistory } from 'src/app/models/orderHistory';
 import { Product } from 'src/app/models/product';
 import { User } from 'src/app/models/user';
+import { AuthGuardService } from 'src/app/services/auth-guard.service';
 import { ProductsService } from 'src/app/services/products.service';
 import { UserService } from 'src/app/services/user.service';
 
@@ -20,7 +21,7 @@ export class AccountComponent {
   isModalOpen : boolean = false;
   selectedProduct? : Product;
 
-  constructor(private userService: UserService, private route: Router, private productService: ProductsService) { }
+  constructor(private userService: UserService, private route: Router, private productService: ProductsService, private authService : AuthGuardService) { }
 
   ngOnInit(): void {
     this.getUserDetails();
@@ -83,9 +84,7 @@ export class AccountComponent {
   }
 
   logout(){
-    this.route.navigateByUrl('/', { skipLocationChange: true }).then(() => {
-      this.route.navigate([this.route.url]);
-    });
+    this.authService.logout();
   }
   
   openModal(product : Product){
