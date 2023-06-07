@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { catchError, of } from 'rxjs';
+import { AuthGuardService } from 'src/app/services/auth-guard.service';
 import { UserService } from 'src/app/services/user.service';
 
 @Component({
@@ -22,7 +24,7 @@ export class LoginComponent {
   registerForm! : FormGroup;
   isModalOpen : boolean = false;
   
-  constructor(private formBuilder: FormBuilder, private userService: UserService, private router : Router) {}
+  constructor(private formBuilder: FormBuilder, private userService: UserService, private router : Router, private guard : AuthGuardService) {}
 
   /*
   The ngOnInit is initializing the loginForm property using the formBuilder.group method, which create a new form group. 
@@ -64,9 +66,8 @@ export class LoginComponent {
           })
         ).subscribe((response: string) => {
           if (response) {
-            console.log('Login successful');
             console.log('Token:', response);
-            this.router.navigateByUrl('/account')
+            this.guard.login();
           }
         });
       }
@@ -82,7 +83,7 @@ export class LoginComponent {
         this.userService.registration(name, email, password).subscribe({
           next: (response: string) => {
             console.log('Registration successful:', response);
-            this.router.navigateByUrl('/account')
+            this.guard.login();
           },
           error: (error: any) => {
             console.error('Registration error:', error);

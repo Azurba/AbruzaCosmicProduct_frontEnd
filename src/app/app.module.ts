@@ -35,6 +35,7 @@ import { UserService } from './services/user.service';
 import { ReactiveFormsModule } from '@angular/forms';
 import {MatChipsModule} from '@angular/material/chips';
 import { ModalCardComponent } from './pages/account/modal-card/modal-card.component';
+import { AuthGuardService } from './services/auth-guard.service';
 
 
 @NgModule({
@@ -72,7 +73,7 @@ import { ModalCardComponent } from './pages/account/modal-card/modal-card.compon
     ReactiveFormsModule,
     MatChipsModule
   ],
-  providers: [ProductsService, CartService, Depoimentos, User, UserService],
+  providers: [ProductsService, CartService, Depoimentos, User, UserService, AuthGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

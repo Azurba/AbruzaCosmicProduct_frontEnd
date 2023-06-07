@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { OrderHistory } from 'src/app/models/orderHistory';
 import { Product } from 'src/app/models/product';
+import { AuthGuardService } from 'src/app/services/auth-guard.service';
 import { CartService } from 'src/app/services/cart.service';
 import { UserService } from 'src/app/services/user.service';
 
@@ -20,7 +21,7 @@ export class CheckoutComponent {
   allOrders : OrderHistory[] = [];
   isErrorModalOpen: boolean = false;
 
-  constructor(private formBuilder: FormBuilder, cartService: CartService, private userService: UserService, private router: Router) {
+  constructor(private formBuilder: FormBuilder, cartService: CartService, private userService: UserService, private router: Router, private authService : AuthGuardService) {
     this.cartItems = cartService.getCartItems();
     this.cartTotal = cartService.getTotal();
   }
@@ -67,11 +68,9 @@ export class CheckoutComponent {
   }
 
   onSubmitForm() {
-    console.log(this.orderHistory)
-    if(this.userService._email === undefined){
+    if(this.authService.isAuthenticated() == false){
       this.router.navigateByUrl('/login');
-    }else{
-      
+    }else{  
       if (this.checkoutForm != undefined) {
         if (this.checkoutForm.valid) {
           this.userService.addOrderHistory(this.orderHistory).subscribe({
