@@ -11,13 +11,4 @@ export class ModalCardComponent {
   @Input() orderHistory: OrderHistory[] = [];
   productService: any;
   @Input() selectedProduct?: Product
-
-
-  ngOnInit(): void {
-    console.log('order History: ', this.selectedProduct);
-
-    // this.productService.searchProduct().subscribe(result => {
-    //   this.productsArray = result;
-    // });
-  }
 }
