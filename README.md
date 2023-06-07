@@ -1,6 +1,6 @@
 # About
 
-This is a fully working fictitious web store that sells universe themed products like t-shirts, hats, posters and much more. It is divided into two modules, ASP.NET API Backend which is responsible for managing all the API and database connections and the Angular Frontend module that uses API calls to get all the information about products, user account and order histories and display it to the user. This app uses JWT tokens to handle authentication and authorization of users, which includes account registration and login. In addition, it uses Route Guards in order to define which routes are available, depending if the user is logging in or not
+This is a fully working fictitious web store that sells universe themed products like t-shirts, hats, posters and much more. It is divided into two modules, ASP.NET API Backend which is responsible for managing all the API and database connections and the Angular Frontend module that uses API calls to get all the information about products, user account and order histories and display it to the user. This app uses JWT tokens to handle authentication and authorization of users, which includes account registration and login. In addition, it uses Route Guards in order to define which routes are available, depending if the user is logging in or not.
 
 # Videos
 
