@@ -26,7 +26,7 @@ export class ProductCardComponent {
   ngOnInit(): void {
     this.route.url.subscribe((segments) => {
       const currentRoute = segments[0].path; // Get the current route segment
-      console.log(currentRoute);
+      //console.log(currentRoute);
       this.productService.getProductsByType(currentRoute).subscribe(result => {
         this.productsArray = result;
       });
@@ -39,7 +39,7 @@ export class ProductCardComponent {
   }
 
   openModal(item: Product) {
-    console.log("clicked")
+    //console.log("clicked")
     this.modalItem = item;
     this.isModalOpen = true;
   }
@@ -66,7 +66,7 @@ export class ProductCardComponent {
 
   updateOrder(order : string){
     this.order = order;
-    console.log(this.order);
+    //console.log(this.order);
     if(this.selected == 'price'){
       this.sortBy('price')
     }

@@ -28,7 +28,7 @@ export class TshirtsComponent {
     this.productService.getProductsByType('tshirts').subscribe(result =>{
       this.productsArray = result;
     });
-    console.log(this.productsArray);
+    //console.log(this.productsArray);
   }
 
   addToCart(item : Product){
@@ -61,7 +61,7 @@ export class TshirtsComponent {
   }
 
   openModal(item: Product) {
-    console.log("clicked")
+    //console.log("clicked")
     this.modalItem = item;
     this.isModalOpen = true;
   }
@@ -89,7 +89,7 @@ export class TshirtsComponent {
 
   updateOrder(order : string){
     this.order = order;
-    console.log(this.order);
+    //console.log(this.order);
     if(this.selected == 'price'){
       this.sortBy('price')
     }

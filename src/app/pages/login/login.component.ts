@@ -24,7 +24,7 @@ export class LoginComponent {
   registerForm! : FormGroup;
   isModalOpen : boolean = false;
   
-  constructor(private formBuilder: FormBuilder, private userService: UserService, private router : Router, private guard : AuthGuardService) {}
+  constructor(private formBuilder: FormBuilder, private userService: UserService, private guard : AuthGuardService) {}
 
   /*
   The ngOnInit is initializing the loginForm property using the formBuilder.group method, which create a new form group. 
@@ -66,7 +66,6 @@ export class LoginComponent {
           })
         ).subscribe((response: string) => {
           if (response) {
-            console.log('Token:', response);
             this.guard.login();
           }
         });
@@ -82,7 +81,7 @@ export class LoginComponent {
         const password = this.registerForm.value.password;
         this.userService.registration(name, email, password).subscribe({
           next: (response: string) => {
-            console.log('Registration successful:', response);
+            //console.log('Registration successful:', response);
             this.guard.login();
           },
           error: (error: any) => {

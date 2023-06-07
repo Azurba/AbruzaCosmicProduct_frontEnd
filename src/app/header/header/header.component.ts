@@ -28,13 +28,8 @@ export class HeaderComponent {
   }
 
   redirectAcc(){
-    console.log(this.userService._email)
+    //console.log(this.userService._email)
     this.router.navigateByUrl('/account')
-    // if(this.userService._email === undefined){
-    //   this.router.navigateByUrl('/login');
-    // }else{
-    //   this.router.navigateByUrl('/account');
-    // }
   }
 
 }

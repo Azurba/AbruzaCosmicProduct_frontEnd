@@ -25,7 +25,7 @@ export class AccountComponent {
 
   ngOnInit(): void {
     this.getUserDetails();
-    console.log('Order:', this.orderHistory);
+    //console.log('Order:', this.orderHistory);
   }
   
   getUserDetails() {
